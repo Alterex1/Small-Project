@@ -2,11 +2,12 @@
 <html>
 <head>
     <title> Digital Rolodex </title>
+    <script type="text/javascript" src="js/backend.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div class="form-container">
-        <form action="login.php" method="post">
+        <form>
             <h2 style="font-family: monospace;">Welcome to RoloNext:</h2>
             <h2 style="font-family: monospace;">A Modern Rolodex</h2>
             
@@ -17,9 +18,10 @@
 
             
 
-            <button type="submit" value="Login" style="font-family: monospace;"> Login </button>
+            <button onclick="Login()" type="submit" value="Login" style="font-family: monospace;"> Login </button>
 
-            <button formaction="register.php" value="Register" type="submit" style="font-family: monospace;"> Create Account </button>
+            <button onclick="Create()" value="Register" type="submit" style="font-family: monospace;"> Create Account </button>
+            
         </form>
     </div>
 </body>
