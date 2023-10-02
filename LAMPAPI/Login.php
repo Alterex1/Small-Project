@@ -11,26 +11,27 @@
 	$inData = getRequestInfo();
 	
 	$id = 1;
-	$firstName = "";
-	$lastName = "";
+	
 	//Stablishing connection to the DB
 	$conn = new mysqli("localhost", "RODRIGO", "12345", "COP4331"); 	
 	if( $conn->connect_error )
 	{
 		returnWithError( $conn->connect_error );
 	}
+	
 	else
 	{
+		
 		//Prepare statement to add a new user to the table using email and password
-		$stmt = $conn->prepare("SELECT ID,FirstName,LastName FROM Users WHERE Email=? AND Password =?");
+		$stmt = $conn->prepare("SELECT ID FROM Users WHERE email = ? AND Password = ?");
 		//reads input from request body
 		$stmt->bind_param("ss", $inData["email"], $inData["password"]);
 		$stmt->execute();
 		$result = $stmt->get_result();
-		//if a fetch is successful, return firstname, lastanem and ID as a json file.
+		//if a fetch is successful, return firstname, lastname and ID as a json file.
 		if( $row = $result->fetch_assoc()  )
 		{
-			returnWithInfo( $row['FirstName'], $row['LastName'], $row['ID'] );
+			returnWithInfo($row['ID'] );
 		}
 		else
 		{
@@ -58,9 +59,9 @@
 		sendResultInfoAsJson( $retValue );
 	}
 	
-	function returnWithInfo( $firstName, $lastName, $id )
+	function returnWithInfo( $id )
 	{
-		$retValue = '{"ID":' . $id . ',"FirstName":"' . $firstName . '","LastName":"' . $lastName . '","error":""}';
+		$retValue = '{"ID":' . $id . '}';
 		sendResultInfoAsJson( $retValue );
 	}
 	
