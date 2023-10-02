@@ -2,6 +2,7 @@
 <html>
 <head>
     <title> Digital Rolodex </title>
+    <script type="text/javascript" src="js/backend.js"></script>
     <link rel="stylesheet" type="text/css" href="createStyle.css">
 </head>
 <body>
@@ -15,7 +16,7 @@
 
             <input type="password" name="password" placeholder="Repeat Password" style="font-family: monospace;"><br>
 
-            <button type="submit" style="font-family: monospace;"> Create Account </button>
+            <button type="submit" style="font-family: monospace;" onclick=addUser()> Create Account </button>
         </form>
     </div>
 </body>
