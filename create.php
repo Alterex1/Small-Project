@@ -2,6 +2,7 @@
 <html>
 <head>
     <title> Digital Rolodex </title>
+    <script type="text/javascript" src="js/backend.js"></script>
     <link rel="stylesheet" type="text/css" href="createStyle.css">
 </head>
 <body>
