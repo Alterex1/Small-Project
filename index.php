@@ -20,7 +20,7 @@
 
             <button onclick="Login()" type="submit" value="Login" style="font-family: monospace;"> Login </button>
 
-            <button onclick="Create()" value="Register" type="submit" style="font-family: monospace;"> Create Account </button>
+            <button onclick="addUser()" value="Register" type="submit" style="font-family: monospace;"> Create Account </button>
             
         </form>
     </div>
