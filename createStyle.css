@@ -59,3 +59,21 @@ input[type="password"]{
 #createButton:hover{
     opacity: 0.2;
 }
+
+#backButton{
+    font-family: monospace;
+    justify-content: center;
+    width: 500px;
+    margin: auto;
+    background-color: rgb(216,151,147);
+    padding: 15px;
+    font-size: 20px;
+    color: aliceblue;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: none;
+}
+
+#backButton:hover{
+    opacity: 0.6;
+}
