@@ -41,6 +41,7 @@
         <input type="text" placeholder="Enter Email" id="email" required>
 
         <button type="submit" onclick="addContact();"class="btn">Add User</button>
+        <span id="contactAddResult"></span>
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </div>
     

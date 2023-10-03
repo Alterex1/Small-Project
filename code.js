@@ -211,7 +211,7 @@ function addContact(){
 
 
 
-    document.getElementById("colorAddResult").innerHTML = "";
+    document.getElementById("contactAddResult").innerHTML = "";
 
     let tmp = {firstname:firstname,lastname:lastname,phone:phone,email:email,userId,userId};
     let jsonPayload = JSON.stringify( tmp );
