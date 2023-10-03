@@ -2,14 +2,14 @@ const urlBase = 'http://cop4331slp-18contactmanager.xyz/LAMPAPI';
 const extension = 'php';
 
 let userId = 0;
-let email = "";
+let loginEmail = "";
 
 
 function Login()
 {
 
     userId = 0;
-	email = "";
+	loginEmail = "";
 
     let email = document.getElementById("email").value;
 	let password = document.getElementById("password").value;
@@ -43,7 +43,7 @@ function Login()
 					return;
 				}
 
-                email = jsonObject.email;
+                loginEmail = jsonObject.email;
 				//firstName = jsonObject.firstName;
 				//lastName = jsonObject.lastName;
 
@@ -68,7 +68,7 @@ function saveCookie()
 	let minutes = 20;
 	let date = new Date();
 	date.setTime(date.getTime()+(minutes*60*1000));	
-	document.cookie = "email=" + email + ",userId=" + userId + ";expires=" + date.toGMTString();
+	document.cookie = "email=" + loginEmail + ",userId=" + userId + ";expires=" + date.toGMTString();
 }
 
 function readCookie()
@@ -82,7 +82,7 @@ function readCookie()
 		let tokens = thisOne.split("=");
 		if( tokens[0] == "email" )
 		{
-			email = tokens[1];
+			loginEmail = tokens[1];
 		}
 		else if( tokens[0] == "userId" )
 		{
@@ -96,7 +96,7 @@ function readCookie()
 	}
 	else
 	{
-		document.getElementById("userEmail").innerHTML = "Logged in as " + email + ",userID = " + userId;
+		document.getElementById("userEmail").innerHTML = "Logged in as " + loginEmail + ", userID = " + userId;
 	}
 }
 
