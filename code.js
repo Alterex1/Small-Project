@@ -242,7 +242,7 @@ function openForm() {
 {
 	let email = document.getElementById("email").value;
 
-		let tmp = {email:email};
+		let tmp = {email:email,userid:userId};
 	  let jsonPayload = JSON.stringify( tmp );
   
 	  let url = urlBase + '/deleteContact.' + extension;
