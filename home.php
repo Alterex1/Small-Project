@@ -2,11 +2,13 @@
 <html>
 <head>
     <title> User Home Page </title>
-    <script type="text/javascript" src="js/backend.js"></script>
+    <script type="text/javascript" src="backend.js"></script>
     <link rel="stylesheet" type="text/css" href="homeStyle.css">
 </head>
 <body>
     <h2 style="font-family: monospace;"> Your Contact List </h2>
+
+    <button type="submit" value="Add Contact" style="font-family: monospace;"> Login </button>
     
     <form id="form" role="search">
         <input type="search" id="query" name="q" placeholder="Search Contact..." style="font-family: monospace;">
