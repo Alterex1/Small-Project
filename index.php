@@ -13,7 +13,7 @@
             <h2 style="font-family: monospace;">Welcome to RoloNext:</h2>
             <h2 style="font-family: monospace;">A Modern Rolodex</h2>
             
-            <input type="text" id="email" placeholder="Login" style="font-family: monospace;"><br>
+            <input type="text" id="email" placeholder="Email Address" style="font-family: monospace;"><br>
             
             <input type="password" id="password" placeholder="Password" style="font-family: monospace;"><br>
 
