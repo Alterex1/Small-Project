@@ -23,13 +23,15 @@
         </button>
     </form>
 
-    <button onclick="openForm()" id="addButton" value="Add Contact" style="font-family: monospace;"> Add Contact </button>
-
+    <div id="addDiv">
+        <button onclick="openForm()" id="addButton" value="Add Contact" style="font-family: monospace;"> Add Contact </button>
+    </div>
     <!-- The form -->
     <div class="form-popup" id="myForm">
 
-        <label for="first name"><b>First Name</b></label>
-        <input type="text" placeholder="Enter First Name" id="firstname" required>
+        
+        <input type="text" id="firstname" placeholder="Enter First Name" style="font-family: monospace;" required><br>
+        
 
         <label for="last name"><b>Last Name</b></label>
         <input type="text" placeholder="Enter Last Name" id="lastname" required>
@@ -65,6 +67,11 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <div id="logoutDiv">
+        <span id="userEmail"></span>
+        <button type="button" id="logoutButton" class = "buttons" style="font-family: monospace;" onclick="Logout();"> Logout </button>
     </div>
 </body>
 </html>

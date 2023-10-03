@@ -26,26 +26,17 @@ form{
     height: 35px;
 }
 
-.addButton{
+#firstname{
+    background-color: white;
     font-family: monospace;
-    justify-content: center;
-    width: 150px;
-    margin-left: 25px;
-    margin-right: 20px;
-    background-color: rgb(216,151,147);
+    font-size: 20px;
+    display: block;
+    border: 5px solid rgb(129,162,145);
+    width: 70%;
     padding: 15px;
-    font-size: 14px;
-    color: aliceblue;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    border: none;
+    margin: 2px auto;
+    border-radius: 2px;
 }
-
-
-.addButton:hover{
-    opacity: 0.2;
-}
-
 
 input{
     all: unset;
@@ -104,20 +95,47 @@ thead{
 
 }
 
+#addDiv{
+    text-align: center;
+}
+
 #addButton{
     font-family: monospace;
+    width: 500px;
     background-color: rgb(129,162,145);
     border: none;
     color: aliceblue;
-    padding: 15px 50px;
+    padding: 10px 50px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 
 #addButton:hover{
     opacity: 0.2;
+}
+
+#logoutDiv{
+    text-align: center;
+}
+
+#logoutButton{
+    font-family: monospace;
+    justify-content: center;
+    width: 500px;
+    margin: auto;
+    background-color: rgb(216,151,147);
+    padding: 15px;
+    font-size: 20px;
+    color: aliceblue;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: none;
+}
+
+#logoutButton:hover{
+    opacity: 0.6;
 }
 
