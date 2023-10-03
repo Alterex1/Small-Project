@@ -191,3 +191,11 @@ function searchUser()
 		document.getElementById("colorSearchResult").innerHTML = err.message;
 	}
 }
+
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
