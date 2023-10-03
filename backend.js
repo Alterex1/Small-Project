@@ -5,7 +5,11 @@ function addUser()
 {
 	let newEmail = document.getElementById("email").value;
     let newPassword = document.getElementById("password").value;
+    let newRPassword = document.getElementById("rpassword").value;
 	document.getElementById("addUserResult").innerHTML = "";
+
+    if(newPassword != newRPassword)
+        document.getElementById("addUserResult").innerHTML = "Passwords do not match";
 
 	let tmp = {email:newEmail,password:newPassword};
 	let jsonPayload = JSON.stringify( tmp );
