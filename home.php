@@ -43,7 +43,7 @@
     </div>
 
     <div id="addDiv">
-        <button onclick="openForm()" id="addButton" value="Add Contact" style="font-family: monospace;"> Add Contact </button>
+        <button onclick="openForm()" id="addButton" value="Add Contact" style="font-family: monospace;"> Delete Contact </button>
     </div>
     <!-- The form -->
     <div class="form-popup" id="delete">
@@ -52,7 +52,7 @@
         <button type="submit" id="addContact" onclick="deleteContact();"class="btn">Delete</button>
 
         <span id="contactDeleteResult"></span>
-        
+
         <button type="button" id="closeButton" class="btn cancel" onclick="closeForm()">Close</button>
     </div>
     
