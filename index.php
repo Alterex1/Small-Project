@@ -2,7 +2,7 @@
 <html>
 <head>
     <title> Digital Rolodex </title>
-    <script type="text/javascript" src="js/backend.js"></script>
+    <script type="text/javascript" src="backend.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
 
             <button onclick="Login()" type="submit" value="Login" style="font-family: monospace;"> Login </button>
 
-            <button onclick="Create()" value="Register" type="submit" style="font-family: monospace;"> Create Account </button>
+            <button onclick="addUser()" value="Register" type="submit" style="font-family: monospace;"> Create Account </button>
             
         </form>
     </div>
