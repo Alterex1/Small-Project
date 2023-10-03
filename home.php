@@ -28,18 +28,18 @@
     <div class="form-popup" id="myForm">
 
         <label for="first name"><b>First Name</b></label>
-        <input type="text" placeholder="Enter First Name" name="firstname" required>
+        <input type="text" placeholder="Enter First Name" id="firstname" required>
 
         <label for="last name"><b>Last Name</b></label>
-        <input type="text" placeholder="Enter Last Name" name="lastname" required>
+        <input type="text" placeholder="Enter Last Name" id="lastname" required>
 
         <label for="phone number"><b>Phone Number</b></label>
-        <input type="number" placeholder="Enter Phone Number" name="phone" required>
+        <input type="number" placeholder="Enter Phone Number" id="phone" required>
 
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
+        <input type="text" placeholder="Enter Email" id="email" required>
 
-        <button type="submit" class="btn">Add User</button>
+        <button type="submit" onclick="searchUser();"class="btn">Add User</button>
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </div>
     
