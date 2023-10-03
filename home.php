@@ -22,7 +22,7 @@
         </button>
     </form>
 
-    <button onclick="addContact()" id="addButton" value="Add Contact" style="font-family: monospace;"> Add Contact </button>
+    <button onclick="openForm()" id="addButton" value="Add Contact" style="font-family: monospace;"> Add Contact </button>
 
     <!-- The form -->
     <div class="form-popup" id="myForm">
