@@ -1,14 +1,16 @@
+const urlBase = 'cop4331slp-18contactmanager.xyz/LAMPAPI';
+const extension = 'php';
 
 function addUser()
 {
 	let newEmail = document.getElementById("email").value;
     let newPassword = document.getElementById("password").value;
-	document.getElementById("colorAddResult").innerHTML = "";
+	document.getElementById("addUserResult").innerHTML = "";
 
-	let tmp = {color:newColor,userId,userId};
+	let tmp = {email:newEmail,password:newPassword};
 	let jsonPayload = JSON.stringify( tmp );
 
-	let url = urlBase + '/AddColor.' + extension;
+	let url = urlBase + '/Register.' + extension;
 	
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
@@ -19,7 +21,7 @@ function addUser()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				document.getElementById("colorAddResult").innerHTML = "Color has been added";
+				document.getElementById("addUserResult").innerHTML = "User has been added";
 			}
 		};
 		xhr.send(jsonPayload);

@@ -15,8 +15,8 @@
             <input type="password" name="password" placeholder="Password" style="font-family: monospace;"><br>
 
             <input type="password" name="password" placeholder="Repeat Password" style="font-family: monospace;"><br>
-
             <button type="submit" style="font-family: monospace;" onclick=addUser()> Create Account </button>
+            <span id="addUserResult"></span>
         </form>
     </div>
 </body>
