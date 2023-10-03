@@ -236,3 +236,39 @@ function openForm() {
   
   
   }
+
+
+  function deleteContact()
+{
+	let email = document.getElementById("email").value;
+
+		let tmp = {email:email};
+	  let jsonPayload = JSON.stringify( tmp );
+  
+	  let url = urlBase + '/deleteContact.' + extension;
+	  
+	  let xhr = new XMLHttpRequest();
+	  xhr.open("POST", url, true);
+	  xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	  try
+	  {
+		  xhr.onreadystatechange = function() 
+		  {
+			  if (this.readyState == 4 && this.status == 200) 
+			  {
+				  //document.getElementById("addContactResult").innerHTML = "Contact has been added";
+			  }
+		  };
+		  xhr.send(jsonPayload);
+	  }
+	  catch(err)
+	  {
+		  document.getElementById("colorAddResult").innerHTML = err.message;
+	  }
+  
+  
+  
+
+
+
+}
