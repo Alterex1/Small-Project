@@ -202,7 +202,7 @@ function openForm() {
 
 
 
-  
+
   function addContact()
   {
   
@@ -215,7 +215,7 @@ function openForm() {
 	  
   
   
-	  document.getElementById("addContactResult").innerHTML = "";
+	  //document.getElementById("addContactResult").innerHTML = "";
   
 	  let tmp = {firstname:firstname,lastname:lastname,phone:phone,email:email,userid:userId};
 	  let jsonPayload = JSON.stringify( tmp );
@@ -231,7 +231,7 @@ function openForm() {
 		  {
 			  if (this.readyState == 4 && this.status == 200) 
 			  {
-				  document.getElementById("addContactResult").innerHTML = "Contact has been added";
+				  //document.getElementById("addContactResult").innerHTML = "Contact has been added";
 			  }
 		  };
 		  xhr.send(jsonPayload);
