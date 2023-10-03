@@ -3,21 +3,13 @@ body{
     background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-
-form{
-    align-items: center;
-    width: 400px;
-    margin: auto auto;
-    background: rgb(185,186,180);
-    border-radius: 15px;
+    height: 150vh;
 }
 
 h2{
     font-family: monospace;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     font-size: 35px;
     color: rgb(62, 62, 62);
 }
@@ -44,15 +36,18 @@ input[type="password"]{
     border-radius: 2px;
 }
 
-button{
+#loginDiv{
+    text-align: center;
+}
+
+#loginButton{
     font-family: monospace;
-    justify-content: center;
-    width: 150px;
+    width: 500px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(216,151,147);
     padding: 15px;
-    font-size: 14px;
+    font-size: 20px;
     color: aliceblue;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -60,6 +55,24 @@ button{
 }
 
 
-button:hover{
-    opacity: 0.2;
+#loginButton:hover{
+    opacity: 0.6;
+}
+
+#createButton{
+    font-family: monospace;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(216,151,147);
+    padding: 15px;
+    font-size: 20px;
+    color: aliceblue;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: none;
+}
+
+#createButton:hover{
+    opacity: 0.6;
 }

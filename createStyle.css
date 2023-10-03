@@ -36,16 +36,19 @@ input[type="password"]{
     border-radius: 2px;
 }
 
-button{
+#registerDiv{
+    text-align: center;
+}
+
+#createButton{
     font-family: monospace;
     justify-content: center;
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 500px;
+    margin: auto;
     
-    background-color: black;
+    background-color: rgb(216,151,147);
     padding: 15px;
-    font-size: 14px;
+    font-size: 20px;
     color: aliceblue;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -53,6 +56,6 @@ button{
 }
 
 
-button:hover{
+#createButton:hover{
     opacity: 0.2;
 }
