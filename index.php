@@ -2,27 +2,31 @@
 <html>
 <head>
     <title> Digital Rolodex </title>
-    <script type="text/javascript" src="backend.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="md5.js"></script>
+	<script type="text/javascript" src="code.js"></script>
+    <link href="style.css" rel="stylesheet">	
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 <body>
-    <div class="form-container">
-        <form>
+    <div id="loginDiv">
+        
             <h2 style="font-family: monospace;">Welcome to RoloNext:</h2>
             <h2 style="font-family: monospace;">A Modern Rolodex</h2>
             
-            <input type="text" name="email" placeholder="Email Address" style="font-family: monospace;"><br>
+            <input type="text" id="email" placeholder="login" style="font-family: monospace;"><br>
             
-            <input type="password" name="password" placeholder="Password" style="font-family: monospace;"><br>
+            <input type="password" id="password" placeholder="Password" style="font-family: monospace;"><br>
 
 
             
 
-            <button onclick="Login()" type="submit" value="Login" style="font-family: monospace;"> Login </button>
+            <button type="button" id="loginButton" class = "buttons" style="font-family: monospace;" onclick="Login();"> Login </button>
 
-            <button onclick="addUser()" value="Register" type="submit" style="font-family: monospace;"> Create Account </button>
-            
-        </form>
+            <button formaction="register.php" value="Register" type="submit" style="font-family: monospace;"> Create Account </button>
+
+            <span id="loginResult"></span>
+     
     </div>
 </body>
 </html>
