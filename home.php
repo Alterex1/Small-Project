@@ -4,6 +4,12 @@
     <title> User Home Page </title>
     <script type="text/javascript" src="code.js"></script>
     <link rel="stylesheet" type="text/css" href="homeStyle.css">
+    <script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() 
+	{
+		readCookie();
+	}, false);
+	</script>
 </head>
 <body>
     <h2 style="font-family: monospace;"> Your Contact List </h2>
