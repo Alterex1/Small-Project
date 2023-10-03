@@ -20,7 +20,7 @@
 
             <button type="button" id="loginButton" class = "buttons" style="font-family: monospace;" onclick="Login();"> Login </button>
 
-            <button formaction="register.php" value="Register" type="submit" style="font-family: monospace;"> Create Account </button>
+            <button onclick="window.location.href='http://cop4331slp-18contactmanager.xyz/create.php';" type="button" style="font-family: monospace;"> Create Account </button>
 
             <span id="loginResult"></span>
     </div>
