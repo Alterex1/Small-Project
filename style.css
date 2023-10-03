@@ -48,8 +48,8 @@ button{
     font-family: monospace;
     justify-content: center;
     width: 150px;
-    margin-left: 25px;
-    margin-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgb(216,151,147);
     padding: 15px;
     font-size: 14px;

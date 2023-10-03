@@ -2,7 +2,7 @@
 <html>
 <head>
     <title> User Home Page </title>
-    <script type="text/javascript" src="backend.js"></script>
+    <script type="text/javascript" src="code.js"></script>
     <link rel="stylesheet" type="text/css" href="homeStyle.css">
 </head>
 <body>

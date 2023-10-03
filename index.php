@@ -18,15 +18,11 @@
             
             <input type="password" id="password" placeholder="Password" style="font-family: monospace;"><br>
 
-
-            
-
             <button type="button" id="loginButton" class = "buttons" style="font-family: monospace;" onclick="Login();"> Login </button>
 
             <button formaction="register.php" value="Register" type="submit" style="font-family: monospace;"> Create Account </button>
 
             <span id="loginResult"></span>
-     
     </div>
 </body>
 </html>

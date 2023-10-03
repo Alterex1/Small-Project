@@ -26,6 +26,27 @@ form{
     height: 35px;
 }
 
+.addButton{
+    font-family: monospace;
+    justify-content: center;
+    width: 150px;
+    margin-left: 25px;
+    margin-right: 20px;
+    background-color: rgb(216,151,147);
+    padding: 15px;
+    font-size: 14px;
+    color: aliceblue;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: none;
+}
+
+
+.addButton:hover{
+    opacity: 0.2;
+}
+
+
 input{
     all: unset;
     font-size: 14px;
@@ -40,7 +61,7 @@ input{
     opacity: 0.8;
 }
 
-button{
+#searchButton{
     all: unset;
     cursor: pointer;
     width: 30px;
@@ -82,3 +103,21 @@ thead{
     display: block;
 
 }
+
+#addButton{
+    font-family: monospace;
+    background-color: rgb(129,162,145);
+    border: none;
+    color: aliceblue;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+#addButton:hover{
+    opacity: 0.2;
+}
+
