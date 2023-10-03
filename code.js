@@ -199,3 +199,45 @@ function openForm() {
   function closeForm() {
     document.getElementById("myForm").style.display = "none";
   }
+
+  function addContact(){
+
+
+	let firstname = document.getElementById("firstname").value;
+	let lastname = document.getElementById("secondname").value;
+	let phone = document.getElementById("phone").value;
+	let email = document.getElementById("email").value;
+
+	
+
+
+	document.getElementById("colorAddResult").innerHTML = "";
+
+	let tmp = {firstname:firstName,lastname:lastname,phone:phone,email:email,userId,userId};
+	let jsonPayload = JSON.stringify( tmp );
+
+	let url = urlBase + '/addContact.' + extension;
+	
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				document.getElementById("colorAddResult").innerHTML = "Color has been added";
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		document.getElementById("colorAddResult").innerHTML = err.message;
+	}
+
+
+
+
+}
