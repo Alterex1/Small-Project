@@ -2,7 +2,6 @@
 <html>
 <head>
     <title> Digital Rolodex </title>
-
 	<script type="text/javascript" src="code.js"></script>
     <link href="style.css" rel="stylesheet">	
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">

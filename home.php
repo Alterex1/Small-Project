@@ -4,17 +4,17 @@
     <title> User Home Page </title>
     <script type="text/javascript" src="code.js"></script>
     <link rel="stylesheet" type="text/css" href="homeStyle.css">
+    
     <script type="text/javascript">
-	document.addEventListener('DOMContentLoaded', function() 
-	{
-		readCookie();
-	}, false);
+	    document.addEventListener('DOMContentLoaded', function() 
+	    {
+	    	readCookie();
+	    }, false);
 	</script>
 </head>
 <body>
     <h2 style="font-family: monospace;"> Your Contact List </h2>
 
-    
     <form id="form" role="search">
         <input type="search" id="query" name="q" placeholder="Search Contact..." style="font-family: monospace;">
         <button id="searchButton">
@@ -28,23 +28,18 @@
     </div>
     <!-- The form -->
     <div class="form-popup" id="myForm">
-
-        
         <input type="text" id="firstname" placeholder="Enter First Name" style="font-family: monospace;" required><br>
+       
+        <input type="text" id="lastname" placeholder="Enter Last Name" style="font-family: monospace;" required><br>
+   
+        <input type="text" id="number" placeholder="Enter Phone Number" style="font-family: monospace;" required><br>
         
+        <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
+       
 
-        <label for="last name"><b>Last Name</b></label>
-        <input type="text" placeholder="Enter Last Name" id="lastname" required>
-
-        <label for="phone number"><b>Phone Number</b></label>
-        <input type="number" placeholder="Enter Phone Number" id="phone" required>
-
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" id="email" required>
-
-        <button type="submit" onclick="addContact();"class="btn">Add User</button>
+        <button type="submit" id="addContact" onclick="addContact();"class="btn">Add Contact</button>
         <span id="contactAddResult"></span>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        <button type="button" id="closeButton" class="btn cancel" onclick="closeForm()">Close</button>
     </div>
     
 
