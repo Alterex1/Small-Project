@@ -27,7 +27,7 @@
         <button onclick="openForm()" id="addButton" value="Add Contact" style="font-family: monospace;"> Add Contact </button>
     </div>
     <!-- The form -->
-    <div class="form-popup" id="myForm">
+    <div class="form-popup" id="add">
         <input type="text" id="firstname" placeholder="Enter First Name" style="font-family: monospace;" required><br>
        
         <input type="text" id="lastname" placeholder="Enter Last Name" style="font-family: monospace;" required><br>
@@ -39,6 +39,20 @@
 
         <button type="submit" id="addContact" onclick="addContact();"class="btn">Add Contact</button>
         <span id="contactAddResult"></span>
+        <button type="button" id="closeButton" class="btn cancel" onclick="closeForm()">Close</button>
+    </div>
+
+    <div id="addDiv">
+        <button onclick="openForm()" id="addButton" value="Add Contact" style="font-family: monospace;"> Add Contact </button>
+    </div>
+    <!-- The form -->
+    <div class="form-popup" id="delete">
+        <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
+
+        <button type="submit" id="addContact" onclick="deleteContact();"class="btn">Delete</button>
+
+        <span id="contactDeleteResult"></span>
+        
         <button type="button" id="closeButton" class="btn cancel" onclick="closeForm()">Close</button>
     </div>
     
