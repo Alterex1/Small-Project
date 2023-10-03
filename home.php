@@ -26,15 +26,20 @@
 
     <!-- The form -->
     <div class="form-popup" id="myForm">
-        <h1>Login</h1>
+
+        <label for="first name"><b>First Name</b></label>
+        <input type="text" placeholder="Enter First Name" name="firstname" required>
+
+        <label for="last name"><b>Last Name</b></label>
+        <input type="text" placeholder="Enter Last Name" name="lastname" required>
+
+        <label for="phone number"><b>Phone Number</b></label>
+        <input type="number" placeholder="Enter Phone Number" name="phone" required>
 
         <label for="email"><b>Email</b></label>
         <input type="text" placeholder="Enter Email" name="email" required>
 
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-
-        <button type="submit" class="btn">Login</button>
+        <button type="submit" class="btn">Add User</button>
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </div>
     
