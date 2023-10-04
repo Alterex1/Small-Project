@@ -194,17 +194,10 @@ function openForm(curID) {
 
 function addContact(curID)
 {
-
-
     let firstname = document.getElementById("firstname").value;
     let lastname = document.getElementById("lastname").value;
     let phone = document.getElementById("phone").value;
     let email = document.getElementById("email").value;
-
-    
-
-
-    //document.getElementById("addContactResult").innerHTML = "";
 
     let tmp = {firstname:firstname,lastname:lastname,phone:phone,email:email,userid:userId};
     let jsonPayload = JSON.stringify( tmp );
