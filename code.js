@@ -246,36 +246,35 @@ function deleteContact(curID)
 {
 	let email = document.getElementById("email").value;
 
-		let tmp = {email:email,userid:userId};
-	  let jsonPayload = JSON.stringify( tmp );
-  
-	  let url = urlBase + '/deleteContact.' + extension;
-	  
-	  let xhr = new XMLHttpRequest();
-	  xhr.open("POST", url, true);
-	  xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
-	  try
-	  {
-		  xhr.onreadystatechange = function() 
-		  {
-			  if (this.readyState == 4 && this.status == 200) 
-			  {
+	let tmp = {email:email,userid:userId};
+    let jsonPayload = JSON.stringify( tmp );
+
+    let url = urlBase + '/deleteContact.' + extension;
+    
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+    try
+    {
+        xhr.onreadystatechange = function() 
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
                 document.getElementById(curID.id).style.display = "none";
-                document.getElementById(curID.id).value = "";
-				  //document.getElementById("deleteContactResult").innerHTML = "Contact has been added";
-			  }
-		  };
-		  xhr.send(jsonPayload);
-	  }
-	  catch(err)
-	  {
-		  document.getElementById("deleteContactResult").innerHTML = err.message;
-	  }
-  
-  
-  
-
-
+                var temp = document.getElementById(curID.id).getElementsByTagName('input');
+                for(var i = 0; i < temp.length; i++)
+                {
+                    temp[i].value = "";
+                }
+                //document.getElementById("deleteContactResult").innerHTML = "Contact has been added";
+            }
+        };
+        xhr.send(jsonPayload);
+    }
+    catch(err)
+    {
+        document.getElementById("deleteContactResult").innerHTML = err.message;
+    }
 
 }
 
