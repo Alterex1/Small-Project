@@ -1,42 +1,43 @@
 <?php
 $inData = getRequestInfo();
 	
-$searchResults = "";
-$searchCount = 0;
+$searchResults = array(); // Use an array to store the results
 
 $conn = new mysqli("localhost", "RODRIGO", "12345", "COP4331");
 if ($conn->connect_error) 
 {
-    returnWithError( $conn->connect_error );
+    returnWithError($conn->connect_error);
 } 
 else
 {
-    $stmt = $conn->prepare("SELECT firstName, lastName,Phone,Email from Contacts where UserID=?");
+    $stmt = $conn->prepare("SELECT firstName, lastName, Phone, Email from Contacts where UserID=?");
    
-    $UserId = $inData ["userid"];
+    $UserId = $inData["userid"];
 
-    $stmt->bind_param("s", $UserId,);
+    $stmt->bind_param("s", $UserId);
     $stmt->execute();
     
     $result = $stmt->get_result();
     
-    while($row = $result->fetch_assoc())
+    while ($row = $result->fetch_assoc())
     {
-        if( $searchCount > 0 )
-        {
-            $searchResults .= ' , ';
-        }
-        $searchCount++;
-        $searchResults .= '" firstname: ' . $row["firstName"] . ' lastname: ' . $row["lastName"]. ' phone: ' . $row["Phone"] . ' email: ' . $row["Email"] . '"';
+        $contact = array(
+            "firstName" => $row["firstName"],
+            "lastName" => $row["lastName"],
+            "phone" => $row["Phone"],
+            "email" => $row["Email"]
+        );
+        
+        $searchResults[] = $contact; // Add each contact as a separate object
     }
     
-    if( $searchCount == 0 )
+    if (empty($searchResults))
     {
-        returnWithError( "No Records Found" );
+        returnWithError("No Records Found");
     }
     else
     {
-        returnWithInfo( $searchResults );
+        sendResultInfoAsJson($searchResults); // Return the entire array
     }
     
     $stmt->close();
@@ -48,22 +49,17 @@ function getRequestInfo()
     return json_decode(file_get_contents('php://input'), true);
 }
 
-function sendResultInfoAsJson( $obj )
+function sendResultInfoAsJson($obj)
 {
     header('Content-type: application/json');
-    echo $obj;
+    echo json_encode($obj); // Encode the array as JSON
 }
 
-function returnWithError( $err )
+function returnWithError($err)
 {
-    $retValue = '{"id":0,"firstName":"","lastName":"","error":"' . $err . '"}';
-    sendResultInfoAsJson( $retValue );
+    $retValue = array(
+        "error" => $err
+    );
+    sendResultInfoAsJson($retValue);
 }
-
-function returnWithInfo( $searchResults )
-{
-    $retValue = '{"results":[' . $searchResults . '],"error":""}';
-    sendResultInfoAsJson( $retValue );
-}
-
 ?>
