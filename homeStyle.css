@@ -30,6 +30,10 @@ form{
     text-align: center;
 }
 
+.form-popup{
+    display: none;
+}
+
 #popupButton{
     font-family: monospace;
     width: 600px;
@@ -79,7 +83,7 @@ form{
     margin-bottom: 5px;
 }
 
-#number{
+#phone{
     background-color: white;
     font-family: monospace;
     font-size: 14px;

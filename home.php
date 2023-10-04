@@ -31,7 +31,7 @@
        
         <input type="text" id="lastname" placeholder="Enter Last Name" style="font-family: monospace;" required><br>
    
-        <input type="text" id="number" placeholder="Enter Phone Number" style="font-family: monospace;" required><br>
+        <input type="text" id="phone" placeholder="Enter Phone Number" style="font-family: monospace;" required><br>
         
         <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
        
