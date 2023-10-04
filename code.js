@@ -187,9 +187,11 @@ function openForm(curID) {
     document.getElementById(curID.id).style.display = "block";
   }
   
-  function closeForm(curID) {
+function closeForm(curID) {
     document.getElementById(curID.id).style.display = "none";
-  }
+    var temp = curID.getElementsByTagName('div')[0].getElementsByTagName('span');
+    temp[0].innerHTML = "";
+}
 
 
 function addContact(curID)
@@ -201,7 +203,7 @@ function addContact(curID)
 
     if(firstname == "" || lastname == "" || phone == "" || email == "")
     {
-        document.getElementById("addContactResult").innerHTML = "There are empty fields!";
+        document.getElementById("contactAddResult").innerHTML = "There are empty fields!";
         return;
     }
 
@@ -247,6 +249,12 @@ function deleteContact(curID)
     console.log(email);
 	let tmp = {email:email,userid:userId};
     let jsonPayload = JSON.stringify( tmp );
+
+    if(email == "")
+    {
+        document.getElementById("contactDeleteResult").innerHTML = "Did not put in an email!";
+        return;
+    }
 
     let url = urlBase + '/deleteContact.' + extension;
     
