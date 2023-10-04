@@ -23,6 +23,7 @@
         </button>
     </form>
 
+
     <div id="addDiv">
         <button onclick="openForm(this.parentNode.nextElementSibling)" id="popupButton" value="Add Contact" style="font-family: monospace;"> Add Contact </button>
     </div>
@@ -35,10 +36,11 @@
         
         <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
        
-
-        <button type="submit" id="actionButton" onclick="addContact(this.parentNode);"class="btn">Add Contact</button>
-        <span id="contactAddResult"></span>
-        <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode)">Close</button>
+        <div id="addContactButtons">
+            <button type="submit" id="actionButton" onclick="addContact(this.parentNode);"class="btn">Add Contact</button>
+            <span id="contactAddResult"></span>
+            <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode)">Close</button>
+        </div>
     </div>
 
     <div id="deleteDiv">
@@ -47,12 +49,11 @@
     <!-- The form -->
     <div class="form-popup" id="delete">
         <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
-
-        <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode);"class="btn">Delete</button>
-
-        <span id="contactDeleteResult"></span>
-
-        <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode)">Close</button>
+        <div id="deleteContactButtons">
+            <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode);"class="btn">Delete</button>
+            <span id="contactDeleteResult"></span>
+            <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode)">Close</button>
+        </div>
     </div>
     
 

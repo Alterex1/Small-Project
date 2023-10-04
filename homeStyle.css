@@ -26,12 +26,12 @@ form{
     height: 35px;
 }
 
-#myForm{
-    text-align: center;
-}
-
 .form-popup{
     display: none;
+}
+
+#myForm{
+    text-align: center;
 }
 
 #popupButton{
@@ -48,9 +48,8 @@ form{
     margin-bottom: 15px;
 }
 
-
 #popupButton:hover{
-    opacity: 0.2;
+    opacity: 0.6;
 }
 
 #firstname{
@@ -111,6 +110,22 @@ form{
     margin: auto;
     border-radius: 2px;
     margin-bottom: 5px;
+}
+
+#addDiv{
+    text-align: center;
+}
+
+#addContactButtons{
+    text-align: center;
+}
+
+#deleteDiv{
+    text-align: center;
+}
+
+#deleteContactButtons{
+    text-align: center;
 }
 
 #actionButton{
@@ -207,15 +222,6 @@ thead{
 
 }
 
-#addDiv{
-    text-align: center;
-}
-
-#deleteDiv{
-    text-align: center;
-}
-
-
 #logoutDiv{
     text-align: center;
 }
@@ -237,4 +243,3 @@ thead{
 #logoutButton:hover{
     opacity: 0.6;
 }
-
