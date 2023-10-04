@@ -10,7 +10,7 @@ if ($conn->connect_error)
 } 
 else
 {
-    $stmt = $conn->prepare("SELECT firstName, lastName, Phone, Email from Contacts where UserID=?");
+    $stmt = $conn->prepare("SELECT firstName, lastName, Phone, Email,ID from Contacts where UserID=?");
    
     $UserId = $inData["userid"];
 
@@ -25,7 +25,8 @@ else
             "firstName" => $row["firstName"],
             "lastName" => $row["lastName"],
             "phone" => $row["Phone"],
-            "email" => $row["Email"]
+            "email" => $row["Email"],
+            "contactID" => $row["ID"]
         );
         
         $searchResults[] = $contact; // Add each contact as a separate object
