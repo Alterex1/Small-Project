@@ -24,31 +24,31 @@
     </form>
 
     <div id="addDiv">
-        <button onclick="openForm(this.parentNode.nextElementSibling)" id="addB" value="Add Contact" style="font-family: monospace;"> Add Contact </button>
+        <button onclick="openForm(this.parentNode.nextElementSibling)" id="popupButton" value="Add Contact" style="font-family: monospace;"> Add Contact </button>
     </div>
     <div class="form-popup" id="add">
         <input type="text" id="firstname" placeholder="Enter First Name" style="font-family: monospace;" required><br>
        
         <input type="text" id="lastname" placeholder="Enter Last Name" style="font-family: monospace;" required><br>
    
-        <input type="text" id="phone" placeholder="Enter Phone Number" style="font-family: monospace;" required><br>
+        <input type="text" id="number" placeholder="Enter Phone Number" style="font-family: monospace;" required><br>
         
         <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
        
 
-        <button type="submit" id="addContact" onclick="addContact();"class="btn">Add Contact</button>
+        <button type="submit" id="actionButton" onclick="addContact();"class="btn">Add Contact</button>
         <span id="contactAddResult"></span>
         <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode)">Close</button>
     </div>
 
     <div id="deleteDiv">
-        <button onclick="openForm(this.parentNode.nextElementSibling)" id="deleteB" value="Delete Contact" style="font-family: monospace;"> Delete Contact </button>
+        <button onclick="openForm(this.parentNode.nextElementSibling)" id="popupButton" value="Delete Contact" style="font-family: monospace;"> Delete Contact </button>
     </div>
     <!-- The form -->
     <div class="form-popup" id="delete">
         <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
 
-        <button type="submit" id="addContact" onclick="deleteContact();"class="btn">Delete</button>
+        <button type="submit" id="actionButton" onclick="deleteContact();"class="btn">Delete</button>
 
         <span id="contactDeleteResult"></span>
 
