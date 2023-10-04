@@ -192,8 +192,6 @@ function openForm(curID) {
   }
 
 
-
-
 function addContact()
 {
 
