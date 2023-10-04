@@ -192,7 +192,7 @@ function openForm(curID) {
   }
 
 
-function addContact()
+function addContact(curID)
 {
 
 
@@ -220,6 +220,12 @@ function addContact()
         {
             if (this.readyState == 4 && this.status == 200) 
             {
+                document.getElementById(curID.id).style.display = "none";
+                var temp = document.getElementById(curID.id).getElementsByTagName('input');
+                for(var i = 0; i < temp.length; i++)
+                {
+                    temp[i].value = "";
+                }
                 //document.getElementById("addContactResult").innerHTML = "Contact has been added";
             }
         };
@@ -236,7 +242,7 @@ function addContact()
 }
 
 
-function deleteContact()
+function deleteContact(curID)
 {
 	let email = document.getElementById("email").value;
 
@@ -254,6 +260,8 @@ function deleteContact()
 		  {
 			  if (this.readyState == 4 && this.status == 200) 
 			  {
+                document.getElementById(curID.id).style.display = "none";
+                document.getElementById(curID.id).value = "";
 				  //document.getElementById("deleteContactResult").innerHTML = "Contact has been added";
 			  }
 		  };

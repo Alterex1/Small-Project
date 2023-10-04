@@ -36,7 +36,7 @@
         <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
        
 
-        <button type="submit" id="actionButton" onclick="addContact();"class="btn">Add Contact</button>
+        <button type="submit" id="actionButton" onclick="addContact(this.parentNode);"class="btn">Add Contact</button>
         <span id="contactAddResult"></span>
         <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode)">Close</button>
     </div>
@@ -48,7 +48,7 @@
     <div class="form-popup" id="delete">
         <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
 
-        <button type="submit" id="actionButton" onclick="deleteContact();"class="btn">Delete</button>
+        <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode);"class="btn">Delete</button>
 
         <span id="contactDeleteResult"></span>
 
