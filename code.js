@@ -246,7 +246,6 @@ function addContact(curID)
 function deleteContact(curID)
 {
 	let email = document.getElementById("email2").value;
-    console.log(email);
 	let tmp = {email:email,userid:userId};
     let jsonPayload = JSON.stringify( tmp );
 
