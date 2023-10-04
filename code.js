@@ -43,7 +43,7 @@ function Login()
 					return;
 				}
 
-                loginEmail = jsonObject.email;
+                		loginEmail = email;
 				//firstName = jsonObject.firstName;
 				//lastName = jsonObject.lastName;
 
@@ -134,7 +134,7 @@ function addUser()
 	}
 	catch(err)
 	{
-		document.getElementById("colorAddResult").innerHTML = err.message;
+		document.getElementById("addUserResult").innerHTML = err.message;
 	}
 	
 }
@@ -160,15 +160,15 @@ function searchContact()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				document.getElementById("colorSearchResult").innerHTML = "Users(s) has been retrieved";
+				document.getElementById("contactSearchResult").innerHTML = "Users(s) has been retrieved";
 				let jsonObject = JSON.parse( xhr.responseText );
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{
-					colorList += jsonObject.results[i];
+					contactList += jsonObject.results[i];
 					if( i < jsonObject.results.length - 1 )
 					{
-						colorList += "<br />\r\n";
+						contactList += "<br />\r\n";
 					}
 				}
 				
@@ -179,7 +179,7 @@ function searchContact()
 	}
 	catch(err)
 	{
-		document.getElementById("colorSearchResult").innerHTML = err.message;
+		document.getElementById("contactSearchResult").innerHTML = err.message;
 	}
 }
 
@@ -237,7 +237,7 @@ function openForm(id) {
 	  }
 	  catch(err)
 	  {
-		  document.getElementById("colorAddResult").innerHTML = err.message;
+		  document.getElementById("addContactResult").innerHTML = err.message;
 	  }
   
   
@@ -250,7 +250,7 @@ function deleteContact()
 {
 	let email = document.getElementById("email").value;
 
-		let tmp = {email:email};
+		let tmp = {email:email,userid:userId};
 	  let jsonPayload = JSON.stringify( tmp );
   
 	  let url = urlBase + '/deleteContact.' + extension;
@@ -264,14 +264,14 @@ function deleteContact()
 		  {
 			  if (this.readyState == 4 && this.status == 200) 
 			  {
-				  //document.getElementById("addContactResult").innerHTML = "Contact has been added";
+				  //document.getElementById("deleteContactResult").innerHTML = "Contact has been added";
 			  }
 		  };
 		  xhr.send(jsonPayload);
 	  }
 	  catch(err)
 	  {
-		  document.getElementById("colorAddResult").innerHTML = err.message;
+		  document.getElementById("deleteContactResult").innerHTML = err.message;
 	  }
   
   
@@ -279,4 +279,13 @@ function deleteContact()
 
 
 
+}
+
+function getContacts()
+{
+	let url = urlBase + '/getContacts.' + extension
+
+	let xhr = new XMLHTTPRequest();
+	xhr.open("GET", url, false);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
 }

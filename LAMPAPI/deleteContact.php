@@ -4,16 +4,18 @@
 	
 
     $email = $inData["email"];
+	$userId = $inData["userid"];
 
 	$conn = new mysqli("localhost", "RODRIGO", "12345", "COP4331");
+	
 	if ($conn->connect_error) 
 	{
 		returnWithError( $conn->connect_error );
 	} 
 	else
 	{
-		$stmt = $conn->prepare("DELETE FROM Contacts WHERE Email=?");
-		$stmt->bind_param("s", $email);
+		$stmt = $conn->prepare("DELETE FROM Contacts WHERE Email=? AND UserID =?");
+		$stmt->bind_param("ss", $email,$userId);
 		$stmt->execute();
 		$stmt->close();
 		$conn->close();
