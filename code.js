@@ -43,7 +43,7 @@ function Login()
 					return;
 				}
 
-                loginEmail = jsonObject.email;
+                		loginEmail = email;
 				//firstName = jsonObject.firstName;
 				//lastName = jsonObject.lastName;
 
@@ -271,4 +271,13 @@ function openForm() {
 
 
 
+}
+
+function getContacts()
+{
+	let url = urlBase + '/getContacts.' + extension
+
+	let xhr = new XMLHTTPRequest();
+	xhr.open("GET", url, false);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
 }
