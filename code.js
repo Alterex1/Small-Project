@@ -199,6 +199,12 @@ function addContact(curID)
     let phone = document.getElementById("phone").value;
     let email = document.getElementById("email").value;
 
+    if(firstname == "" || lastname == "" || phone == "" || email == "")
+    {
+        document.getElementById("addContactResult").innerHTML = "There are empty fields!";
+        return;
+    }
+
     let tmp = {firstname:firstname,lastname:lastname,phone:phone,email:email,userid:userId};
     let jsonPayload = JSON.stringify( tmp );
 
