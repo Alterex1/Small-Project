@@ -183,20 +183,13 @@ function searchContact()
 	}
 }
 
-function openForm(id) {
-    var parentid = textnode.parentNode.id;
-    console.log(parentid);
-    var str = id;
-    str = str.slice(0,-1);
-    console.log(str);
-    document.getElementById(str).style.display = "block";
+function openForm(curID) {
+    console.log(curID);
+    document.getElementById(curID.id).style.display = "block";
   }
   
-  function closeForm() {
-    var str = id;
-    str = str.slice(0,-1);
-    console.log(str)
-    document.getElementById("add").style.display = "none";
+  function closeForm(curID) {
+    document.getElementById(curID.id).style.display = "none";
   }
 
 
