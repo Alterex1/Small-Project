@@ -24,7 +24,7 @@
     </form>
 
     <div id="addDiv">
-        <button onclick="openForm()" id="addButton" value="Add Contact" style="font-family: monospace;"> Add Contact </button>
+        <button onclick="openForm(this.id)" id="addB" value="Add Contact" style="font-family: monospace;"> Add Contact </button>
     </div>
     <!-- The form -->
     <div class="form-popup" id="add">
@@ -42,8 +42,8 @@
         <button type="button" id="closeButton" class="btn cancel" onclick="closeForm()">Close</button>
     </div>
 
-    <div id="addDiv">
-        <button onclick="openForm()" id="addButton" value="Add Contact" style="font-family: monospace;"> Delete Contact </button>
+    <div id="deleteDiv">
+        <button onclick="openForm(this.id)" id="deleteB" value="Delete Contact" style="font-family: monospace;"> Delete Contact </button>
     </div>
     <!-- The form -->
     <div class="form-popup" id="delete">

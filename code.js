@@ -183,12 +183,20 @@ function searchContact()
 	}
 }
 
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
+function openForm(id) {
+    var parentid = textnode.parentNode.id;
+    console.log(parentid);
+    var str = id;
+    str = str.slice(0,-1);
+    console.log(str);
+    document.getElementById(str).style.display = "block";
   }
   
   function closeForm() {
-    document.getElementById("myForm").style.display = "none";
+    var str = id;
+    str = str.slice(0,-1);
+    console.log(str)
+    document.getElementById("add").style.display = "none";
   }
 
 
@@ -238,7 +246,7 @@ function openForm() {
   }
 
 
-  function deleteContact()
+function deleteContact()
 {
 	let email = document.getElementById("email").value;
 
