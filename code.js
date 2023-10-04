@@ -281,4 +281,24 @@ function getContacts()
 	let xhr = new XMLHTTPRequest();
 	xhr.open("GET", url, false);
 	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	 try
+	  {
+		  xhr.onreadystatechange = function() 
+		  {
+			  if (this.readyState == 4 && this.status == 200) 
+			  {
+				  let jsonObject = JSON.parse( xhr.responseText );
+				  contactFirstName = jsonObject.firstname;
+				  contactLastName = jsonObject.lastname;
+				  contactPhone = jsonObject.phone;
+				  contactEmail = jsonObject.email;  
+			  }
+		  };
+		  xhr.send(jsonPayload);
+	  }
+	catch(err)
+	  {
+		  // document.getElementById("deleteContactResult").innerHTML = err.message;
+	  }
 }
+
