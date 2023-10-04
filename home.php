@@ -37,9 +37,9 @@
         <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
        
         <div id="addContactButtons">
-            <button type="submit" id="actionButton" onclick="addContact(this.parentNode);"class="btn">Add Contact</button>
+            <button type="submit" id="actionButton" onclick="addContact(this.parentNode.parentNode);"class="btn">Add Contact</button>
             <span id="contactAddResult"></span>
-            <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode)">Close</button>
+            <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
         </div>
     </div>
 
@@ -48,11 +48,11 @@
     </div>
     <!-- The form -->
     <div class="form-popup" id="delete">
-        <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
+        <input type="text" id="email2" placeholder="Enter Email" style="font-family: monospace;" required><br>
         <div id="deleteContactButtons">
-            <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode);"class="btn">Delete</button>
+            <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode.parentNode);"class="btn">Delete</button>
             <span id="contactDeleteResult"></span>
-            <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode)">Close</button>
+            <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
         </div>
     </div>
     
