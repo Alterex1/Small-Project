@@ -46,7 +46,7 @@
     </div>
     <!-- The form -->
     <div class="form-popup" id="delete">
-        <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
+        <input type="text" id="email2" placeholder="Enter Email" style="font-family: monospace;" required><br>
 
         <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode);"class="btn">Delete</button>
 
