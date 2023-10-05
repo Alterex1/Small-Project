@@ -285,43 +285,6 @@ function deleteContact(curID)
 
 }
 
-function getContacts()
-{
-	let url = urlBase + '/getContacts.' + extension
-
-	let xhr = new XMLHTTPRequest();
-	xhr.open("GET", url, false);
-	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
-	 try
-	  {
-		  xhr.onreadystatechange = function() 
-		  {
-			  if (this.readyState == 4 && this.status == 200) 
-			  {
-				  let jsonObject = xhr.responseText;
-				  contactFirstName = jsonObject.firstname;
-				  contactLastName = jsonObject.lastname;
-				  contactPhone = jsonObject.phone;
-				  contactEmail = jsonObject.email;
-
-				  document.getElementById("contactTableBody").innerHTML = `
-      					<tr>
-                    				<th style="font-family: monospace;">${contactFirstName}</th>
-                    				<th style="font-family: monospace;"${contactLastName}</th>
-                    				<th style="font-family: monospace;">${contactPhone}</th>
-                    				<th style="font-family: monospace;">${contactEmail}</th>
-               			 	</tr>
-				`;
-			  }
-		  };
-		  xhr.send(jsonPayload);
-	  }
-	catch(err)
-	  {
-		  // document.getElementById("deleteContactResult").innerHTML = err.message;
-	  }
-}
-
 
 function Logout()
 {
