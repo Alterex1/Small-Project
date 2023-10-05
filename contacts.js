@@ -42,7 +42,7 @@ function updateContactTable(contacts) {
 
   // Loop through the contacts array and create table rows
   for (var i = 0; i < contacts.length; i++) {
-      console.log("Loop works")
+      
       var contact = contacts[i];
       var row = document.createElement("tr");
 
