@@ -10,11 +10,11 @@
             <h2 style="font-family: monospace;">Create Account</h2>
 
             
-            <input type="text" name="email" placeholder="Email Address" style="font-family: monospace;"><br>
+            <input type="text" id="email" placeholder="Email Address" style="font-family: monospace;"><br>
             
-            <input type="password" name="password" placeholder="Password" style="font-family: monospace;"><br>
+            <input type="password" id="password" placeholder="Password" style="font-family: monospace;"><br>
 
-            <input type="password" name="password" placeholder="Repeat Password" style="font-family: monospace;"><br>
+            <input type="password" id="rpassword" placeholder="Repeat Password" style="font-family: monospace;"><br>
 
             <button type="submit" id="createButton" style="font-family: monospace;" onclick="addUser()"> Create Account </button>
 
