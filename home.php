@@ -89,6 +89,7 @@ $id = $_GET['id'];
         <span id="userEmail"></span>
         <button type="button" id="logoutButton" class = "buttons" style="font-family: monospace;" onclick="Logout();"> Logout </button>
     </div>
-</body>
 <script src="code.js"></script>
+</body>
+
 </html>
