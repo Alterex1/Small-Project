@@ -298,11 +298,20 @@ function getContacts()
 		  {
 			  if (this.readyState == 4 && this.status == 200) 
 			  {
-				  let jsonObject = JSON.parse( xhr.responseText );
+				  let jsonObject = xhr.responseText;
 				  contactFirstName = jsonObject.firstname;
 				  contactLastName = jsonObject.lastname;
 				  contactPhone = jsonObject.phone;
-				  contactEmail = jsonObject.email;  
+				  contactEmail = jsonObject.email;
+
+				  document.getElementById("contactTableBody").innerHTML = `
+      					<tr>
+                    				<th style="font-family: monospace;">${contactFirstName}</th>
+                    				<th style="font-family: monospace;"${contactLastName}</th>
+                    				<th style="font-family: monospace;">${contactPhone}</th>
+                    				<th style="font-family: monospace;">${contactEmail}</th>
+               			 	</tr>
+				`;
 			  }
 		  };
 		  xhr.send(jsonPayload);
