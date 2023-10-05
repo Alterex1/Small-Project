@@ -1,9 +1,17 @@
+<?php
+$id = $_GET['id'];
+?>
+
 <!DOCTYPE html>
+
 <html>
+<script src="contacts.js"></script>
+<script>var useri = <?php echo json_encode($id); ?>;</script>
 <head>
     <title> User Home Page </title>
-    <script type="text/javascript" src="code.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="homeStyle.css">
+
     
     <script type="text/javascript">
 	    document.addEventListener('DOMContentLoaded', function() 
@@ -37,7 +45,7 @@
         <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
        
         <div id="addContactButtons">
-            <button type="submit" id="actionButton" onclick="addContact(this.parentNode.parentNode);"class="btn">Add Contact</button>
+            <button type="submit" id="actionButton" onclick="addContact(this.parentNode.parentNode);location.reload();"class="btn">Add Contact</button>
             <span id="contactAddResult"></span>
             <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
         </div>
@@ -50,7 +58,7 @@
     <div class="form-popup" id="delete">
         <input type="text" id="email2" placeholder="Enter Email" style="font-family: monospace;" required><br>
         <div id="deleteContactButtons">
-            <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode.parentNode);"class="btn">Delete</button>
+            <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode.parentNode);location.reload();"class="btn">Delete</button>
             <span id="contactDeleteResult"></span>
             <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
         </div>
@@ -67,20 +75,20 @@
                     <th style="font-family: monospace;">Phone Number</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td style="font-family: monospace;">John</td>
-                    <td style="font-family: monospace;">Galt</td>
-                    <td style="font-family: monospace;">jg1105@gmail.com</td>
-                    <td style="font-family: monospace;">313-445-5151</td>
-                </tr>
+            <tbody id="contactTableBody">
+                
             </tbody>
         </table>
     </div>
-
+    
+    <script>
+        showContacts(useri);
+    </script>
+        
     <div id="logoutDiv">
         <span id="userEmail"></span>
         <button type="button" id="logoutButton" class = "buttons" style="font-family: monospace;" onclick="Logout();"> Logout </button>
     </div>
 </body>
+<script src="code.js"></script>
 </html>
