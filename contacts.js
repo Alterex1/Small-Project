@@ -1,6 +1,5 @@
 function showContacts(id){
-console.log("cotnacts gets called");
-console.log("id inside contacts",id);
+
 var contacts = [];
 
 
@@ -8,7 +7,7 @@ let tmp = {userid:id};
 
 	//var tmp = {login:login,password:hash};
 	let jsonPayload = JSON.stringify( tmp );
-  console.log(jsonPayload);
+  
 
 let url = 'http://cop4331slp-18contactmanager.xyz/LAMPAPI/getContacts.php'
 
