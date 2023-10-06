@@ -26,9 +26,10 @@ form{
     height: 35px;
 }
 
-.form-popup{
+form-popup{
     display: none;
 }
+
 
 #popupButton{
     font-family: monospace;
@@ -49,6 +50,7 @@ form{
 }
 
 #firstname{
+    text-align: left;
     background-color: white;
     font-family: monospace;
     font-size: 14px;
@@ -64,6 +66,7 @@ form{
 }
 
 #lastname{
+    text-align: left;
     background-color: white;
     font-family: monospace;
     font-size: 14px;
@@ -79,6 +82,7 @@ form{
 }
 
 #phone{
+    text-align: left;
     background-color: white;
     font-family: monospace;
     font-size: 14px;
@@ -94,6 +98,7 @@ form{
 }
 
 #email{
+    text-align: left;
     background-color: white;
     font-family: monospace;
     font-size: 14px;
@@ -109,6 +114,7 @@ form{
 }
 
 #email2{
+    text-align: left;
     background-color: white;
     font-family: monospace;
     font-size: 14px;
@@ -123,7 +129,8 @@ form{
     margin-bottom: 5px;
 }
 
-#email3{
+#ID{
+    text-align: left;
     background-color: white;
     font-family: monospace;
     font-size: 14px;

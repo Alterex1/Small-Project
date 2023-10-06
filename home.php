@@ -65,7 +65,7 @@ $id = $_GET['id'];
         <button onclick="openForm(this.parentNode.nextElementSibling)" id="popupButton" value="Delete Contact" style="font-family: monospace;"> Update Contact </button>
     </div>
     <div class="form-popup" id="update">
-        <input type="text" id="email3" placeholder="Enter Email of Contact to Update" style="font-family: monospace;" required><br>
+        <input type="text" id="ID" placeholder="Enter Contact ID to Update" style="font-family: monospace;" required><br>
         <div id="updateContactButtons">
             
             <button onclick="openForm(this.parentNode.nextElementSibling)" id="actionButton" onclick="updateContact(this.parentNode.parentNode);location.reload();"class="btn">Update</button>
