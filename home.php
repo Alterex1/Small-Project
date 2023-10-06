@@ -45,7 +45,7 @@ $id = $_GET['id'];
         <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
        
         <div id="addContactButtons">
-            <button type="submit" id="actionButton" onclick="addContact(this.parentNode.parentNode);location.reload();"class="btn">Add Contact</button>
+            <button type="submit" id="actionButton" onclick="addContact(this.parentNode.parentNode);"class="btn">Add Contact</button>
             <span id="contactAddResult"></span>
             <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
         </div>
@@ -58,7 +58,7 @@ $id = $_GET['id'];
     <div class="form-popup" id="delete">
         <input type="text" id="email2" placeholder="Enter Email" style="font-family: monospace;" required><br>
         <div id="deleteContactButtons">
-            <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode.parentNode);location.reload();"class="btn">Delete</button>
+            <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode.parentNode);"class="btn">Delete</button>
             <span id="contactDeleteResult"></span>
             <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
         </div>
