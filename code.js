@@ -245,14 +245,14 @@ function addContact(curID)
 
 function deleteContact(curID)
 {
-	let email = document.getElementById("email2").value;
-    console.log(email);
-	let tmp = {email:email,userid:userId};
+	let id = document.getElementById("ID").value;
+    
+	let tmp = {id:id,userid:userId};
     let jsonPayload = JSON.stringify( tmp );
 
-    if(email == "")
+    if(id == "")
     {
-        document.getElementById("contactDeleteResult").innerHTML = "Did not put in an email!";
+        document.getElementById("contactDeleteResult").innerHTML = "Did not put in an ID!";
         return;
     }
 
