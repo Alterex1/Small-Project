@@ -78,6 +78,7 @@ function updateContactTable(contacts) {
     row.appendChild(emailAddressCell);
     row.appendChild(phoneNumberCell);
     row.appendChild(updateButtonCell);
+    row.appendChild(updateDeleteCell);
 
     // Append the row to the table body
     tableBody.appendChild(row);
