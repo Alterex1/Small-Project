@@ -231,6 +231,7 @@ function addContact(curID)
             }
         };
         xhr.send(jsonPayload);
+	location.reload()
     }
     catch(err)
     {
@@ -277,6 +278,7 @@ function deleteContact(curID)
             }
         };
         xhr.send(jsonPayload);
+	location.reload()
     }
     catch(err)
     {
