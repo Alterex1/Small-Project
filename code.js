@@ -315,13 +315,6 @@ function searchForContacts() {
   }
 }
 
-function checkContact()
-{
-	
-
-	return true;
-}
-
 function updateContact()
 {
 

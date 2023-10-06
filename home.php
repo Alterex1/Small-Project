@@ -63,13 +63,13 @@ $id = $_GET['id'];
     </div>
 
     <div id="updateDiv">
-    <button onclick="tmp = checkContact(); if(tmp){openForm(this.nextElementSibling.nextElementSibling.nextElementSibling)}" id="actionButton" class="btn">Edit Contact</button>
+        <button onclick="openForm(this.parentNode.nextElementSibling);" id="popupButton" value="Delete Contact" class="btn">Edit Contact</button>
     </div>
     <div class="form-popup" id="update">
         <input type="text" id="ID" placeholder="Enter Contact ID to Update" style="font-family: monospace;" required><br>
         <div id="updateContactButtons">
             
-            <button onclick="openForm(this.nextElementSibling.nextElementSibling.nextElementSibling)" id="actionButton">Edit Contact</button>
+            <button onclick="var tmp = checkContact(this.parentNode.previousElementSibling.previousElementSibling); if(tmp){openForm(this.nextElementSibling.nextElementSibling.nextElementSibling)}" id="actionButton">Edit Contact</button>
             <span id="contactUpdateResult"></span>
             <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
         
