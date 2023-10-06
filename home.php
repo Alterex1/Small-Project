@@ -9,10 +9,7 @@ $id = $_GET['id'];
 <script>var useri = <?php echo json_encode($id); ?>;</script>
 <head>
     <title> User Home Page </title>
-    
-    <link rel="stylesheet" type="text/css" href="homeStyle.css">
-
-    
+    <link href="homeStyle.css" rel="stylesheet">
     <script type="text/javascript">
 	    document.addEventListener('DOMContentLoaded', function() 
 	    {
@@ -45,7 +42,7 @@ $id = $_GET['id'];
         <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
        
         <div id="addContactButtons">
-            <button type="submit" id="actionButton" onclick="addContact(this.parentNode.parentNode);"class="btn">Add Contact</button>
+            <button type="submit" id="actionButton" onclick="addContact(this.parentNode.parentNode);location.reload();"class="btn">Add Contact</button>
             <span id="contactAddResult"></span>
             <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
         </div>
@@ -58,9 +55,33 @@ $id = $_GET['id'];
     <div class="form-popup" id="delete">
         <input type="text" id="email2" placeholder="Enter Email" style="font-family: monospace;" required><br>
         <div id="deleteContactButtons">
-            <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode.parentNode);"class="btn">Delete</button>
+            <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode.parentNode);location.reload();"class="btn">Delete</button>
             <span id="contactDeleteResult"></span>
             <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
+        </div>
+    </div>
+
+    <div id="updateDiv">
+        <button onclick="openForm(this.parentNode.nextElementSibling)" id="popupButton" value="Delete Contact" style="font-family: monospace;"> Update Contact </button>
+    </div>
+    <div class="form-popup" id="update">
+        <input type="text" id="email3" placeholder="Enter Email of Contact to Update" style="font-family: monospace;" required><br>
+        <div id="updateContactButtons">
+            
+            <button onclick="openForm(this.parentNode.nextElementSibling)" id="actionButton" onclick="updateContact(this.parentNode.parentNode);location.reload();"class="btn">Update</button>
+            <span id="contactUpdateResult"></span>
+            <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
+        
+            <div class="form-popup" id="updateFields">
+                <input type="text" id="firstname" placeholder="Enter First Name" style="font-family: monospace;" required><br>
+       
+                <input type="text" id="lastname" placeholder="Enter Last Name" style="font-family: monospace;" required><br>
+  
+                <input type="text" id="phone" placeholder="Enter Phone Number" style="font-family: monospace;" required><br>
+       
+                <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
+            </div>
+
         </div>
     </div>
     

@@ -30,9 +30,6 @@ form{
     display: none;
 }
 
-#myForm{
-    text-align: center;
-}
 
 #popupButton{
     font-family: monospace;
@@ -127,6 +124,21 @@ form{
     margin-bottom: 5px;
 }
 
+#email3{
+    background-color: white;
+    font-family: monospace;
+    font-size: 14px;
+    display: block;
+    border: 5px solid rgb(129,162,145);
+    color: rgb(62, 62, 62);
+    width: 40%;
+    height: 10px;
+    padding: 15px;
+    margin: auto;
+    border-radius: 2px;
+    margin-bottom: 5px;
+}
+
 #addDiv{
     text-align: center;
 }
@@ -140,6 +152,18 @@ form{
 }
 
 #deleteContactButtons{
+    text-align: center;
+}
+
+#updateDiv{
+    text-align: center;
+}  
+
+#update{
+    text-align: center;
+}
+
+#updateContactButtons{
     text-align: center;
 }
 
@@ -192,6 +216,7 @@ input{
 ::placeholder{
     color: rgb(62, 62, 62);
     opacity: 0.8;
+    text-align: left;
 }
 
 #searchButton{
