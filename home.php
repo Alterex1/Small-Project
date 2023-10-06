@@ -54,7 +54,7 @@ $id = $_GET['id'];
     </div>
     <!-- The form -->
     <div class="form-popup" id="delete">
-        <input type="text" id="email2" placeholder="Enter Email" style="font-family: monospace;" required><br>
+    <input type="text" id="ID" placeholder="Enter Contact ID for Deletion" style="font-family: monospace;" required><br>
         <div id="deleteContactButtons">
             <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode.parentNode);location.reload();"class="btn">Delete</button>
             <span id="contactDeleteResult"></span>
@@ -100,7 +100,8 @@ $id = $_GET['id'];
                     <th style="font-family: monospace;">Last Name</th>
                     <th style="font-family: monospace;">Email Address</th>
                     <th style="font-family: monospace;">Phone Number</th>
-                    <th style="font-family: monospace;">Operations</th>
+                    <th style="font-family: monospace;">Update</th>
+                    <th style="font-family: monospace;">Delete</th>
                 </tr>
             </thead>
             <tbody id="contactTableBody">

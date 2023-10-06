@@ -50,6 +50,7 @@ function showContacts(id){
         // Create table cells for each contact property
         var ID = document.createElement("td");
         ID.textContent = contact.contactID;
+        console.log(ID.textContent);
 
         var firstNameCell = document.createElement("td");
         firstNameCell.textContent = contact.firstName;
@@ -63,15 +64,19 @@ function showContacts(id){
         var phoneNumberCell = document.createElement("td");
         phoneNumberCell.textContent = contact.phone;
 
-        var updateButtonCell = document.createElement("button");
+        var updateButtonCell = document.createElement("td");
+        var updateButton = document.createElement("button");
         var updateText = document.createTextNode("Update");
-        updateButtonCell.appendChild(updateText);
+        updateButton.appendChild(updateText);
+        updateButtonCell.appendChild(updateButton);
 
-        var updateDeleteCell = document.createElement("button");
+        var updateDeleteCell = document.createElement("td");
+        var buttonDelete = document.createElement("button");
         var updateText2 = document.createTextNode("Delete");
-        updateDeleteCell.appendChild(updateText2);
-        updateDeleteCell.onclick = deleteContactButton(ID.textContent);
-        updateDeleteCell.onclick = location.reload();
+        buttonDelete.appendChild(updateText2);
+        buttonDelete.onclick = ("click", function(){deleteContactButton(ID.textContent)});
+        buttonDelete.addEventListener("click", location.reload);
+        updateDeleteCell.appendChild(buttonDelete);
 
 
         // Append cells to the row
@@ -114,11 +119,12 @@ function deleteContactButton(curID)
                 //document.getElementById("deleteContactResult").innerHTML = "Contact has been added";
             }
         };
-        xhr.send(jsonPayload);
+        
     }
     catch(err)
     {
         document.getElementById("deleteContactResult").innerHTML = err.message;
     }
 
+    xhr.send(jsonPayload);
 }
