@@ -66,6 +66,10 @@ function updateContactTable(contacts) {
     var updateText = document.createTextNode("Update");
     updateButtonCell.appendChild(updateText);
 
+    var updateDeleteCell = document.createElement("button");
+    var updateText2 = document.createTextNode("Delete");
+    updateDeleteCell.appendChild(updateText2);
+
 
     // Append cells to the row
       row.appendChild(ID);
