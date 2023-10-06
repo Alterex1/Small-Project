@@ -242,8 +242,7 @@ function addContact(curID)
 
 }
 
-
-export function deleteContact(curID)
+function deleteContact(curID)
 {
 	let id = document.getElementById("ID").value;
     

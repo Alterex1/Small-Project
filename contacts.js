@@ -1,4 +1,3 @@
-import {deleteContact} from './code.js';
 
 function showContacts(id){
 
@@ -71,6 +70,8 @@ function showContacts(id){
         var updateDeleteCell = document.createElement("button");
         var updateText2 = document.createTextNode("Delete");
         updateDeleteCell.appendChild(updateText2);
+        updateDeleteCell.onclick = deleteContactButton(ID.textContent);
+        updateDeleteCell.onclick = location.reload();
 
 
         // Append cells to the row
@@ -90,6 +91,34 @@ function showContacts(id){
 
 
 // Loop through the contacts array and create table rows
+}
 
+function deleteContactButton(curID)
+{
+    
+	let tmp = {id:curID,userid:userId};
+    let jsonPayload = JSON.stringify( tmp );
+
+
+    let url = urlBase + '/deleteContact.' + extension;
+    
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+    try
+    {
+        xhr.onreadystatechange = function() 
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+                //document.getElementById("deleteContactResult").innerHTML = "Contact has been added";
+            }
+        };
+        xhr.send(jsonPayload);
+    }
+    catch(err)
+    {
+        document.getElementById("deleteContactResult").innerHTML = err.message;
+    }
 
 }
