@@ -94,6 +94,7 @@ $id = $_GET['id'];
         <table>
             <thead>
                 <tr>
+                    <th style="font-family: monospace;">ID</th>
                     <th style="font-family: monospace;">First Name</th>
                     <th style="font-family: monospace;">Last Name</th>
                     <th style="font-family: monospace;">Email Address</th>
