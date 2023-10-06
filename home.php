@@ -69,7 +69,7 @@ $id = $_GET['id'];
         <input type="text" id="ID" placeholder="Enter Contact ID to Update" style="font-family: monospace;" required><br>
         <div id="updateContactButtons">
             
-            <button onclick="openForm(this.nextElementSibling.nextElementSibling.nextElementSibling)" id="actionButton" onclick="updateContact(this.parentNode.parentNode);location.reload();"class="btn">Update</button>
+            <button onclick="openForm(this.nextElementSibling.nextElementSibling.nextElementSibling)" id="actionButton">Edit Contact</button>
             <span id="contactUpdateResult"></span>
             <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
         
