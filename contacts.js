@@ -72,7 +72,7 @@ function updateContactTable(contacts) {
 
 
     // Append cells to the row
-      row.appendChild(ID);
+    row.appendChild(ID);
     row.appendChild(firstNameCell);
     row.appendChild(lastNameCell);
     row.appendChild(emailAddressCell);
