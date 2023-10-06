@@ -99,8 +99,7 @@ $id = $_GET['id'];
                     <th style="font-family: monospace;">Last Name</th>
                     <th style="font-family: monospace;">Email Address</th>
                     <th style="font-family: monospace;">Phone Number</th>
-                    <th style="font-family: monospace;">Update</th>
-                    <th style="font-family: monospace;">Delete</th>
+                    <th style="font-family: monospace;">Operations</th>
                 </tr>
             </thead>
             <tbody id="contactTableBody">
