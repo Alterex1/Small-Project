@@ -47,6 +47,9 @@ function updateContactTable(contacts) {
       var row = document.createElement("tr");
 
       // Create table cells for each contact property
+      var ID = document.createElement("td");
+      ID.textContent = contact.contactID;
+
       var firstNameCell = document.createElement("td");
       firstNameCell.textContent = contact.firstName;
 
@@ -60,6 +63,7 @@ function updateContactTable(contacts) {
       phoneNumberCell.textContent = contact.phone;
 
       // Append cells to the row
+      row.appendChild(ID);
       row.appendChild(firstNameCell);
       row.appendChild(lastNameCell);
       row.appendChild(emailAddressCell);
