@@ -43,30 +43,36 @@ function updateContactTable(contacts) {
   // Loop through the contacts array and create table rows
   for (var i = 0; i < contacts.length; i++) {
       
-      var contact = contacts[i];
-      var row = document.createElement("tr");
+    var contact = contacts[i];
+    var row = document.createElement("tr");
 
-      // Create table cells for each contact property
-      var firstNameCell = document.createElement("td");
-      firstNameCell.textContent = contact.firstName;
+    // Create table cells for each contact property
+    var firstNameCell = document.createElement("td");
+    firstNameCell.textContent = contact.firstName;
 
-      var lastNameCell = document.createElement("td");
-      lastNameCell.textContent = contact.lastName;
+    var lastNameCell = document.createElement("td");
+    lastNameCell.textContent = contact.lastName;
 
-      var emailAddressCell = document.createElement("td");
-      emailAddressCell.textContent = contact.email;
+    var emailAddressCell = document.createElement("td");
+    emailAddressCell.textContent = contact.email;
 
-      var phoneNumberCell = document.createElement("td");
-      phoneNumberCell.textContent = contact.phone;
+    var phoneNumberCell = document.createElement("td");
+    phoneNumberCell.textContent = contact.phone;
 
-      // Append cells to the row
-      row.appendChild(firstNameCell);
-      row.appendChild(lastNameCell);
-      row.appendChild(emailAddressCell);
-      row.appendChild(phoneNumberCell);
+    var updateButtonCell = document.createElement("button");
+    var updateText = document.createTextNode("Update");
+    updateButtonCell.appendChild(updateText);
 
-      // Append the row to the table body
-      tableBody.appendChild(row);
+
+    // Append cells to the row
+    row.appendChild(firstNameCell);
+    row.appendChild(lastNameCell);
+    row.appendChild(emailAddressCell);
+    row.appendChild(phoneNumberCell);
+    row.appendChild(updateButtonCell);
+
+    // Append the row to the table body
+    tableBody.appendChild(row);
   }
 
 }
