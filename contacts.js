@@ -46,9 +46,12 @@ function updateContactTable(contacts) {
     var contact = contacts[i];
     var row = document.createElement("tr");
 
-    // Create table cells for each contact property
-    var firstNameCell = document.createElement("td");
-    firstNameCell.textContent = contact.firstName;
+      // Create table cells for each contact property
+      var ID = document.createElement("td");
+      ID.textContent = contact.contactID;
+
+      var firstNameCell = document.createElement("td");
+      firstNameCell.textContent = contact.firstName;
 
     var lastNameCell = document.createElement("td");
     lastNameCell.textContent = contact.lastName;
@@ -65,6 +68,7 @@ function updateContactTable(contacts) {
 
 
     // Append cells to the row
+      row.appendChild(ID);
     row.appendChild(firstNameCell);
     row.appendChild(lastNameCell);
     row.appendChild(emailAddressCell);
