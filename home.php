@@ -71,7 +71,7 @@ $id = $_GET['id'];
             
             <button onclick="openForm(this.nextElementSibling.nextElementSibling.nextElementSibling)" id="actionButton" onclick="updateContact(this.parentNode.parentNode);location.reload();"class="btn">Update</button>
             <span id="contactUpdateResult"></span>
-            <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.nextElementSibling)">Close</button>
+            <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
         
             <div class="form-popup" id="updateFields">
                 <input type="text" id="firstname" placeholder="Enter First Name" style="font-family: monospace;" required><br>
@@ -84,7 +84,7 @@ $id = $_GET['id'];
 
                 <button onclick="openForm(this.parentNode.nextElementSibling)" id="actionButton" onclick="updateContact(this.parentNode.parentNode);location.reload();"class="btn">Update Contact</button>
                 <span id="finalUpdateResult"></span>
-                <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
+                <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode)">Close</button>
             </div>
 
         </div>
