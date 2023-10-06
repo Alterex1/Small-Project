@@ -293,27 +293,129 @@ function Logout()
 }
 
 
-function searchForContacts() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("query");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("contactTableBody");
-  tr = table.getElementsByTagName("tr");
 
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
+function searchForContacts() {
+	
+	
+	contactsToSearch = [];
+	let input = document.getElementById("input").value;
+    
+	let tmp = {input:input,userid:userId};
+    let jsonPayload = JSON.stringify( tmp );
+
+
+	let url = urlBase + '/searchContact.' + extension;
+    
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+
+    try
+    {
+        xhr.onreadystatechange = function() 
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+                
+				contactsToSearch = JSON.parse(xhr.responseText);
+				
+            	updateSearchTable(contactsToSearch);
+                //document.getElementById("deleteContactResult").innerHTML = "Contact has been added";
+            }
+        };
+        xhr.send(jsonPayload);
     }
+    catch(err)
+    {
+        document.getElementById("deleteContactResult").innerHTML = err.message;
+    }
+
+
+  }
+  
+
+function updateSearchTable(contactsToSearch){
+	
+
+	hideAllRows();
+
+
+
+
+
+	var tableBody = document.getElementById("contactTableBody");
+
+	// Loop through the contacts array and create table rows
+	for (var i = 0; i < contactsToSearch.length; i++) {
+		
+	  var contact = contactsToSearch[i];
+	  var row = document.createElement("tr");
+  
+		// Create table cells for each contact property
+		var ID = document.createElement("td");
+		ID.textContent = contact.id;
+  
+		var firstNameCell = document.createElement("td");
+		firstNameCell.textContent = contact.firstname;
+  
+	  var lastNameCell = document.createElement("td");
+	  lastNameCell.textContent = contact.lastname;
+  
+	  var emailAddressCell = document.createElement("td");
+	  emailAddressCell.textContent = contact.email;
+  
+	  var phoneNumberCell = document.createElement("td");
+	  phoneNumberCell.textContent = contact.phone;
+  
+	  var updateButtonCell = document.createElement("button");
+	  var updateText = document.createTextNode("Update");
+	  updateButtonCell.appendChild(updateText);
+  
+	  var updateDeleteCell = document.createElement("button");
+	  var updateText2 = document.createTextNode("Delete");
+	  updateDeleteCell.appendChild(updateText2);
+  
+  
+	  // Append cells to the row
+	  row.appendChild(ID);
+	  row.appendChild(firstNameCell);
+	  row.appendChild(lastNameCell);
+	  row.appendChild(emailAddressCell);
+	  row.appendChild(phoneNumberCell);
+	  row.appendChild(updateButtonCell);
+	  row.appendChild(updateDeleteCell);
+  
+	  // Append the row to the table body
+	  tableBody.appendChild(row);
+	}
+	
+  
+  }
+
+
+	  
+
+
+
+function hideAllRows() {
+  var table = document.getElementById("contactTableBody"); 
+
+  if (table) {
+    var rows = table.getElementsByTagName("tr"); // Get all table rows
+
+    // Loop through all rows
+    for (var i = 0; i < rows.length; i++) {
+      rows[i].style.display = "none"; // Hide each row
+    }
+  } else {
+    
   }
 }
+
+
+
+
+
 
 function checkContact()
 {
