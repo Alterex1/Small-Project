@@ -243,7 +243,7 @@ function addContact(curID)
 }
 
 
-function deleteContact(curID)
+export function deleteContact(curID)
 {
 	let email = document.getElementById("email2").value;
     console.log(email);
