@@ -53,7 +53,7 @@ $id = $_GET['id'];
     </div>
     <!-- The form -->
     <div class="form-popup" id="delete">
-        <input type="text" id="email2" placeholder="Enter Email" style="font-family: monospace;" required><br>
+        <input type="text" id="ID" placeholder="Enter Contact ID for Deletion" style="font-family: monospace;" required><br>
         <div id="deleteContactButtons">
             <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode.parentNode);location.reload();"class="btn">Delete</button>
             <span id="contactDeleteResult"></span>
