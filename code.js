@@ -414,18 +414,19 @@ function hideAllRows() {
 
 function updateContact(curID)
 {
-    let firstname = document.getElementById("firstname").value;
-    let lastname = document.getElementById("lastname").value;
-    let phone = document.getElementById("phone").value;
-    let email = document.getElementById("email").value;
+    let firstname = document.getElementById("firstname2").value;
+    let lastname = document.getElementById("lastname2").value;
+    let phone = document.getElementById("phone2").value;
+    let email = document.getElementById("email2").value;
+    let tempID = document.getElementById("ID2").value;
 
-    if(firstname == "" || lastname == "" || phone == "" || email == "")
+    if(firstname == "" || lastname == "" || phone == "" || email == "" || tempID == "")
     {
         document.getElementById("contactAddResult").innerHTML = "There are empty fields!";
         return;
     }
 
-    let tmp = {firstname:firstname,lastname:lastname,userid:userId,phone:phone,email:email};
+    let tmp = {firstname:firstname,lastname:lastname,contactid:tempID,userid:userId,phone:phone,email:email};
     let jsonPayload = JSON.stringify( tmp );
 
     let url = urlBase + '/updateContact.' + extension;

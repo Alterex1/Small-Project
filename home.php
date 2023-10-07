@@ -74,13 +74,13 @@ $id = $_GET['id'];
             <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
         
             <div class="form-popup" id="updateFields">
-                <input type="text" id="firstname" placeholder="Enter First Name" style="font-family: monospace;" required><br>
+                <input type="text" id="firstname2" placeholder="Enter First Name" style="font-family: monospace;" required><br>
        
-                <input type="text" id="lastname" placeholder="Enter Last Name" style="font-family: monospace;" required><br>
+                <input type="text" id="lastname2" placeholder="Enter Last Name" style="font-family: monospace;" required><br>
   
-                <input type="text" id="phone" placeholder="Enter Phone Number" style="font-family: monospace;" required><br>
+                <input type="text" id="phone2" placeholder="Enter Phone Number" style="font-family: monospace;" required><br>
        
-                <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
+                <input type="text" id="email2" placeholder="Enter Email" style="font-family: monospace;" required><br>
                 <div id="finalUpdateButtons">
                     <button id="actionButton" onclick="updateContact(this.parentNode.parentNode);location.reload();"class="btn">Update Contact</button>
                     <span id="finalUpdateResult"></span>
