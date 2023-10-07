@@ -141,7 +141,8 @@ function checkContact(curNode)
 
     if(found == undefined)
     {
-        document.getElementById("contactUpdateResult").innerHTML = "Did not provide an ID or a valid ID"
+        document.getElementById("contactUpdateResult").innerHTML = "Did not provide an ID or a valid ID";
+        document.getElementById("updateFields").style.display = "none";
         return false;
     }
 
