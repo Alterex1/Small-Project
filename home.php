@@ -66,7 +66,7 @@ $id = $_GET['id'];
         <button onclick="openForm(this.parentNode.nextElementSibling);" id="popupButton" value="Delete Contact" class="btn">Edit Contact</button>
     </div>
     <div class="form-popup" id="update">
-        <input type="text" id="ID" placeholder="Enter Contact ID to Update" style="font-family: monospace;" required><br>
+        <input type="text" id="ID2" placeholder="Enter Contact ID to Update" style="font-family: monospace;" required><br>
         <div id="updateContactButtons">
             
             <button onclick="var tmp = checkContact(this.parentNode.previousElementSibling.previousElementSibling); if(tmp){openForm(this.nextElementSibling.nextElementSibling.nextElementSibling)}" id="actionButton">Edit Contact</button>

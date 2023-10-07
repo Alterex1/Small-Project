@@ -94,7 +94,7 @@ function showContacts(id){
             tableBody.appendChild(row);
         }
 
-        contactID = tmpID;
+        contactIDArr = tmpID;
     }
 
 
@@ -139,9 +139,28 @@ function checkContact(curNode)
 
     var found = contactIDArr.find((element) => element == tmpID);
 
-    console.log(found);
+    if(found == undefined)
+    {
+        return;
+    }
 
-	return false;
+    var table = document.getElementById("contactTableBody");
+    var cells = table.getElementsByTagName("tr");
+    var fillout = document.getElementById("updateFields").children;
+    for(var i = 0; i < cells.length; i++)
+    {
+        if(cells[i].cellIndex[0] == tmpID)
+        {
+            for(var j = 0; j < cells[i].cellIndex[0].length; j++)
+            {
+                
+            }
+            break;
+        }
+    }
+
+
+	return;
 }
 
 function checkArray()
