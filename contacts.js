@@ -66,29 +66,12 @@ function showContacts(id){
             var phoneNumberCell = document.createElement("td");
             phoneNumberCell.textContent = contact.phone;
 
-            var updateButtonCell = document.createElement("td");
-            var updateButton = document.createElement("button");
-            var updateText = document.createTextNode("Update");
-            updateButton.appendChild(updateText);
-            updateButtonCell.appendChild(updateButton);
-
-            var updateDeleteCell = document.createElement("td");
-            var buttonDelete = document.createElement("button");
-            var updateText2 = document.createTextNode("Delete");
-            buttonDelete.appendChild(updateText2);
-            buttonDelete.onclick = ("click", function(){deleteContactButton(ID.textContent)});
-            buttonDelete.addEventListener("click", location.reload);
-            updateDeleteCell.appendChild(buttonDelete);
-
-
             // Append cells to the row
             row.appendChild(ID);
             row.appendChild(firstNameCell);
             row.appendChild(lastNameCell);
             row.appendChild(emailAddressCell);
             row.appendChild(phoneNumberCell);
-            row.appendChild(updateButtonCell);
-            row.appendChild(updateDeleteCell);
 
             // Append the row to the table body
             tableBody.appendChild(row);
@@ -170,9 +153,4 @@ function checkContact(curNode)
 
 
 	return true;
-}
-
-function checkArray()
-{
-
 }
