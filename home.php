@@ -82,7 +82,7 @@ $id = $_GET['id'];
        
                 <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
                 <div id="finalUpdateButtons">
-                    <button onclick="openForm(this.parentNode.nextElementSibling)" id="actionButton" onclick="updateContact(this.parentNode.parentNode);location.reload();"class="btn">Update Contact</button>
+                    <button id="actionButton" onclick="updateContact(this.parentNode.parentNode);location.reload();"class="btn">Update Contact</button>
                     <span id="finalUpdateResult"></span>
                     <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
                 </div>

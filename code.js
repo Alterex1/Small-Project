@@ -412,7 +412,46 @@ function hideAllRows() {
   }
 }
 
-function updateContact()
+function updateContact(curID)
 {
+    let firstname = document.getElementById("firstname").value;
+    let lastname = document.getElementById("lastname").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
 
+    if(firstname == "" || lastname == "" || phone == "" || email == "")
+    {
+        document.getElementById("contactAddResult").innerHTML = "There are empty fields!";
+        return;
+    }
+
+    let tmp = {firstname:firstname,lastname:lastname,userid:userId,phone:phone,email:email};
+    let jsonPayload = JSON.stringify( tmp );
+
+    let url = urlBase + '/updateContact.' + extension;
+    
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+    try
+    {
+        xhr.onreadystatechange = function() 
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+                document.getElementById(curID.id).style.display = "none";
+                var temp = document.getElementById(curID.id).getElementsByTagName('input');
+                for(var i = 0; i < temp.length; i++)
+                {
+                    temp[i].value = "";
+                }
+                //document.getElementById("addContactResult").innerHTML = "Contact has been added";
+            }
+        };
+        xhr.send(jsonPayload);
+    }
+    catch(err)
+    {
+        document.getElementById("addContactResult").innerHTML = err.message;
+    }
 }
