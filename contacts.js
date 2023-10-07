@@ -141,24 +141,25 @@ function checkContact(curNode)
 
     if(found == undefined)
     {
-        return;
+        return false;
     }
 
     var table = document.getElementById("contactTableBody");
     var cells = table.getElementsByTagName("tr");
     var fillout = document.getElementById("updateFields").children;
-    var track = 0;
+    var track = 1;
+
     for(var i = 0; i < cells.length; i++)
     {
-        if(cells[i].cellIndex[0] == tmpID)
+        if(cells[i].cells[0].textContent == tmpID)
         {
-            for(var j = 1; j < fillout.length; j++)
+            for(var j = 0; j < fillout.length; j++)
             {
-                if(fillout[j].getAttribute != "input")
+                if(fillout[j].tagName != "INPUT")
                 {
                     continue;
                 }
-                fillout[j].value = cells[i].cellIndex[track].textContent;
+                fillout[j].value = cells[i].cells[track].textContent;
                 track++;
             }
             break;
@@ -166,7 +167,7 @@ function checkContact(curNode)
     }
 
 
-	return;
+	return true;
 }
 
 function checkArray()
