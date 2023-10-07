@@ -30,7 +30,6 @@ form{
     display: none;
 }
 
-
 #popupButton{
     font-family: monospace;
     width: 600px;
@@ -113,7 +112,7 @@ form{
     margin-bottom: 5px;
 }
 
-#email2{
+#ID{
     text-align: left;
     background-color: white;
     font-family: monospace;
@@ -129,7 +128,7 @@ form{
     margin-bottom: 5px;
 }
 
-#ID{
+#ID2{
     text-align: left;
     background-color: white;
     font-family: monospace;
@@ -265,6 +264,9 @@ thead{
     background-color: rgb(216,151,147);
     color: rgb(62, 62, 62);
     display: block;
+    overflow: auto;
+    width: 100%;
+    align-items: center;
 
 }
 
