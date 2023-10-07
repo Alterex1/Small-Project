@@ -147,13 +147,19 @@ function checkContact(curNode)
     var table = document.getElementById("contactTableBody");
     var cells = table.getElementsByTagName("tr");
     var fillout = document.getElementById("updateFields").children;
+    var track = 0;
     for(var i = 0; i < cells.length; i++)
     {
         if(cells[i].cellIndex[0] == tmpID)
         {
-            for(var j = 0; j < cells[i].cellIndex[0].length; j++)
+            for(var j = 1; j < fillout.length; j++)
             {
-                
+                if(fillout[j].getAttribute != "input")
+                {
+                    continue;
+                }
+                fillout[j].value = cells[i].cellIndex[track].textContent;
+                track++;
             }
             break;
         }
