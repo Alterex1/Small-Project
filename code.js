@@ -107,6 +107,12 @@ function addUser()
     let newRPassword = document.getElementById("rpassword").value;
 	document.getElementById("addUserResult").innerHTML = "";
 
+    if(newEmail == "" || newPassword == "" || newRPassword == "")
+    {
+        document.getElementById("addUserResult").innerHTML = "You cannot have blank fields";
+        return;
+    }
+
     if(newPassword != newRPassword)
     {
         document.getElementById("addUserResult").innerHTML = "Passwords do not match";
