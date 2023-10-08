@@ -412,7 +412,7 @@ function updateContact(curID)
     if(firstname == "" || lastname == "" || phone == "" || email == "" || tempID == "")
     {
         document.getElementById("contactAddResult").innerHTML = "There are empty fields!";
-        return;
+        return false;
     }
 
     let tmp = {firstname:firstname,lastname:lastname,contactid:tempID,userid:userId,phone:phone,email:email};
@@ -444,4 +444,6 @@ function updateContact(curID)
     {
         document.getElementById("addContactResult").innerHTML = err.message;
     }
+
+    return true;
 }
