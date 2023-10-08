@@ -367,23 +367,12 @@ function updateSearchTable(contactsToSearch){
 	  var phoneNumberCell = document.createElement("td");
 	  phoneNumberCell.textContent = contact.phone;
   
-	  var updateButtonCell = document.createElement("button");
-	  var updateText = document.createTextNode("Update");
-	  updateButtonCell.appendChild(updateText);
-  
-	  var updateDeleteCell = document.createElement("button");
-	  var updateText2 = document.createTextNode("Delete");
-	  updateDeleteCell.appendChild(updateText2);
-  
-  
 	  // Append cells to the row
 	  row.appendChild(ID);
 	  row.appendChild(firstNameCell);
 	  row.appendChild(lastNameCell);
 	  row.appendChild(emailAddressCell);
 	  row.appendChild(phoneNumberCell);
-	  row.appendChild(updateButtonCell);
-	  row.appendChild(updateDeleteCell);
   
 	  // Append the row to the table body
 	  tableBody.appendChild(row);
