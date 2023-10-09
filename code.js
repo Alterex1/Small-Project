@@ -214,7 +214,7 @@ function addContact(curID)
     if(firstname == "" || lastname == "" || phone == "" || email == "")
     {
         document.getElementById("contactAddResult").innerHTML = "There are Empty Fields!";
-        return;
+        return false;
     }
 
     let tmp = {firstname:firstname,lastname:lastname,phone:phone,email:email,userid:userId};
@@ -247,8 +247,7 @@ function addContact(curID)
         document.getElementById("addContactResult").innerHTML = err.message;
     }
 
-
-
+    return true;
 
 }
 
