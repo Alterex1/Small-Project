@@ -76,3 +76,10 @@ input[type="password"]{
 #createButton:hover{
     opacity: 0.6;
 }
+
+#loginResult{
+    font-family: monospace;
+    text-align: center;
+    color: rgb(62, 62, 62);
+    font-size: 14px;
+}

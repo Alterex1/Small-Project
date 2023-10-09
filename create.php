@@ -18,7 +18,7 @@
 
             <button type="submit" id="createButton" style="font-family: monospace;" onclick="addUser()"> Create Account </button>
 
-            <span id="addUserResult"></span>
+            <span id="addUserResult" style="font-family: monospace;"></span>
 
             <button id="backButton" onclick="window.location.href='http://cop4331slp-18contactmanager.xyz/';" type="button" style="font-family: monospace;"> Back To Login Page </button>
             

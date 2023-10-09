@@ -42,7 +42,7 @@ $id = $_GET['id'];
         <input type="text" id="email" placeholder="Enter Email" style="font-family: monospace;" required><br>
        
         <div id="addContactButtons">
-            <button type="submit" id="actionButton" onclick="var tmp = addContact(this.parentNode.parentNode); if(tmp){location.relod()};"class="btn">Add Contact</button>
+            <button type="submit" id="actionButton" onclick="addContact(this.parentNode.parentNode);location.reload();"class="btn">Add Contact</button>
             <span id="contactAddResult"></span>
             <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
         </div>
@@ -55,7 +55,7 @@ $id = $_GET['id'];
     <div class="form-popup" id="delete">
     <input type="text" id="ID" placeholder="Enter Contact ID for Deletion" style="font-family: monospace;" required><br>
         <div id="deleteContactButtons">
-            <button type="submit" id="actionButton" onclick="var tmp2 = deleteContact(this.parentNode.parentNode); if(tmp2){location.reload()};"class="btn">Delete</button>
+            <button type="submit" id="actionButton" onclick="deleteContact(this.parentNode.parentNode);location.reload();"class="btn">Delete</button>
             <span id="contactDeleteResult"></span>
             <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
         </div>
@@ -112,10 +112,17 @@ $id = $_GET['id'];
         showContacts(useri);
     </script>
         
+    
+        
     <div id="logoutDiv">
-        <span id="userEmail"></span>
         <button type="button" id="logoutButton" class = "buttons" style="font-family: monospace;" onclick="Logout();"> Logout </button>
     </div>
+
+    <div id="userInfoDiv">
+        <span id="userEmail"></span>
+    </div>
+
+    
 
 </body>
 

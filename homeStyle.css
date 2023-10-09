@@ -356,3 +356,42 @@ thead{
 #logoutButton:hover{
     opacity: 0.6;
 }
+
+#contactAddResult{
+    font-family: monospace;
+    text-align: center;
+    color: rgb(62, 62, 62);
+    font-size: 14px;
+}
+
+#contactDeleteResult{
+    font-family: monospace;
+    text-align: center;
+    color: rgb(62, 62, 62);
+    font-size: 14px;
+}
+
+#contactUpdateResult{
+    font-family: monospace;
+    text-align: center;
+    color: rgb(62, 62, 62);
+    font-size: 14px;
+}
+
+#finalUpdateResult{
+    font-family: monospace;
+    text-align: center;
+    color: rgb(62, 62, 62);
+    font-size: 14px;
+}
+
+#userInfoDiv{
+    margin-top: 25px;
+    text-align: center;
+}
+#userEmail{
+    font-family: monospace;
+    text-align: center;
+    color: rgb(62, 62, 62);
+    font-size: 14px;
+}

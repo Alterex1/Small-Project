@@ -39,7 +39,7 @@ function Login()
 		
 				if( userId < 1 )
 				{		
-					document.getElementById("loginResult").innerHTML = "User/Password combination incorrect";
+					document.getElementById("loginResult").innerHTML = "User/Password Combination Incorrect";
 					return;
 				}
 
@@ -109,13 +109,13 @@ function addUser()
 
     if(newEmail == "" || newPassword == "" || newRPassword == "")
     {
-        document.getElementById("addUserResult").innerHTML = "You cannot have blank fields";
+        document.getElementById("addUserResult").innerHTML = "Field(s) Left Blank";
         return;
     }
 
     if(newPassword != newRPassword)
     {
-        document.getElementById("addUserResult").innerHTML = "Passwords do not match";
+        document.getElementById("addUserResult").innerHTML = "Passwords Do Not Match";
         return;
     }
     
@@ -133,7 +133,7 @@ function addUser()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				document.getElementById("addUserResult").innerHTML = "User has been added";
+				document.getElementById("addUserResult").innerHTML = "User Added! Please Return to the Login Screen";
 			}
 		};
 		xhr.send(jsonPayload);
@@ -209,7 +209,7 @@ function addContact(curID)
 
     if(firstname == "" || lastname == "" || phone == "" || email == "")
     {
-        document.getElementById("contactAddResult").innerHTML = "There are empty fields!";
+        document.getElementById("contactAddResult").innerHTML = "There are Empty Fields!";
         return;
     }
 
@@ -257,7 +257,7 @@ function deleteContact(curID)
 
     if(id == "")
     {
-        document.getElementById("contactDeleteResult").innerHTML = "Did not put in an ID!";
+        document.getElementById("contactDeleteResult").innerHTML = "Please Enter an ID";
         return;
     }
 
@@ -417,7 +417,7 @@ function updateContact(curID)
 
     if(firstname == "" || lastname == "" || phone == "" || email == "" || tempID == "")
     {
-        document.getElementById("contactAddResult").innerHTML = "There are empty fields!";
+        document.getElementById("contactAddResult").innerHTML = "There are Empty Fields!";
         return false;
     }
 
