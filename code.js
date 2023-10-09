@@ -261,7 +261,7 @@ function deleteContact(curID)
     if(id == "")
     {
         document.getElementById("contactDeleteResult").innerHTML = "Please Enter an ID";
-        return;
+        return false;
     }
 
     let url = urlBase + '/deleteContact.' + extension;
@@ -291,6 +291,7 @@ function deleteContact(curID)
         document.getElementById("deleteContactResult").innerHTML = err.message;
     }
 
+    return true;
 }
 
 
