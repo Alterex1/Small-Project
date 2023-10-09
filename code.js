@@ -229,7 +229,7 @@ function addContact(curID)
     {
         if((lastname.charCodeAt(i) < 65 || lastname.charCodeAt(i) > 90) && (lastname.charCodeAt(i) < 97 || lastname.charCodeAt(i) > 122))
         {
-            document.getElementById("contactAddResult").innerHTML = "Last Name contains numbers/special characters";
+            document.getElementById("contactAddResult").innerHTML = "Last Name contains a number/special character";
             return false;
         }
     }
@@ -237,7 +237,7 @@ function addContact(curID)
     {
         if(phone.charCodeAt(i) < 48 || phone.charCodeAt(i) > 57 )
         {
-            document.getElementById("contactAddResult").innerHTML = "Phone Number contains characters/special characters";
+            document.getElementById("contactAddResult").innerHTML = "Phone Number contains a character/special character";
             return false;
         }
     }
