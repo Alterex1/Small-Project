@@ -242,6 +242,34 @@ function addContact(curID)
         }
     }
 
+    var check1;
+    var check2;
+
+    for(var i = 0; i < email.length; i++)
+    {
+        if(email.charCodeAt(i) == 64)
+        {
+            check1 = 1;
+        }
+        if(email.charCodeAt(i) == 46)
+        {
+            if(i == email.length - 1)
+            {
+                check2 = 0;
+                break;
+            }
+
+            check2 = 1;
+            break;
+        }
+    }
+
+    if(check1 != 1 || check2 != 1)
+    {
+        document.getElementById("contactAddResult").innerHTML = "Invalid Email";
+        return false;
+    }
+
     let tmp = {firstname:firstname,lastname:lastname,phone:phone,email:email,userid:userId};
     let jsonPayload = JSON.stringify( tmp );
 
@@ -473,6 +501,34 @@ function updateContact(curID)
             document.getElementById("finalUpdateResult").innerHTML = "Phone Number contains a character/special character";
             return false;
         }
+    }
+
+    var check1;
+    var check2;
+
+    for(var i = 0; i < email.length; i++)
+    {
+        if(email.charCodeAt(i) == 64)
+        {
+            check1 = 1;
+        }
+        if(email.charCodeAt(i) == 46)
+        {
+            if(i == email.length - 1)
+            {
+                check2 = 0;
+                break;
+            }
+
+            check2 = 1;
+            break;
+        }
+    }
+
+    if(check1 != 1 && check2 != 1)
+    {
+        document.getElementById("finalUpdateResult").innerHTML = "Invalid Email";
+        return false;
     }
 
     let tmp = {firstname:firstname,lastname:lastname,contactid:tempID,userid:userId,phone:phone,email:email};
