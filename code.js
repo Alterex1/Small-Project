@@ -525,7 +525,7 @@ function updateContact(curID)
         }
     }
 
-    if(check1 != 1 && check2 != 1)
+    if(check1 != 1 || check2 != 1)
     {
         document.getElementById("finalUpdateResult").innerHTML = "Invalid Email";
         return false;
