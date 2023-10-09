@@ -301,7 +301,7 @@ table{
     margin-right: auto;
     border-collapse: collapse;
     table-layout: fixed;
-
+    scrollbar-gutter: auto;
 }
 
 tbody{
@@ -310,6 +310,7 @@ tbody{
     width: 100%;
     height: 200px;
     align-items: center;
+    scrollbar-gutter: stable;
 }
 
 th, td{
@@ -350,6 +351,7 @@ thead{
     color: aliceblue;
     border-radius: 5px;
     margin-bottom: 15px;
+    margin-top: 25px;
     border: none;
 }
 
