@@ -81,7 +81,7 @@ $id = $_GET['id'];
        
                 <input type="text" id="phone2" placeholder="Enter Phone Number" style="font-family: monospace;" required><br>
                 <div id="finalUpdateButtons">
-                    <button id="actionButton" onclick="updateContact(this.parentNode.parentNode);location.reload();"class="btn">Update Contact</button>
+                    <button id="actionButton" onclick="var tmp = updateContact(this.parentNode.parentNode); if(tmp){location.reload()};"class="btn">Update Contact</button>
                     <span id="finalUpdateResult"></span>
                     <button type="button" id="closeButton" class="btn cancel" onclick="closeForm(this.parentNode.parentNode)">Close</button>
                 </div>

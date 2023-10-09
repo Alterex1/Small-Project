@@ -417,7 +417,7 @@ function updateContact(curID)
 
     if(firstname == "" || lastname == "" || phone == "" || email == "" || tempID == "")
     {
-        document.getElementById("contactAddResult").innerHTML = "There are Empty Fields!";
+        document.getElementById("finalUpdateResult").innerHTML = "There are Empty Fields!";
         return false;
     }
 
