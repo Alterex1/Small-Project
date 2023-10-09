@@ -217,6 +217,31 @@ function addContact(curID)
         return false;
     }
 
+    for(var i = 0; i < firstname.length; i++)
+    {
+        if((firstname.charCodeAt(i) < 65 || firstname.charCodeAt(i) > 90) && (firstname.charCodeAt(i) < 97 || firstname.charCodeAt(i) > 122))
+        {
+            document.getElementById("contactAddResult").innerHTML = "First Name contains a number/special character";
+            return false;
+        }
+    }
+    for(var i = 0; i < lastname.length; i++)
+    {
+        if((lastname.charCodeAt(i) < 65 || lastname.charCodeAt(i) > 90) && (lastname.charCodeAt(i) < 97 || lastname.charCodeAt(i) > 122))
+        {
+            document.getElementById("contactAddResult").innerHTML = "Last Name contains numbers/special characters";
+            return false;
+        }
+    }
+    for(var i = 0; i < phone.length; i++)
+    {
+        if(phone.charCodeAt(i) < 48 || phone.charCodeAt(i) > 57 )
+        {
+            document.getElementById("contactAddResult").innerHTML = "Phone Number contains characters/special characters";
+            return false;
+        }
+    }
+
     let tmp = {firstname:firstname,lastname:lastname,phone:phone,email:email,userid:userId};
     let jsonPayload = JSON.stringify( tmp );
 
@@ -423,6 +448,31 @@ function updateContact(curID)
     {
         document.getElementById("finalUpdateResult").innerHTML = "There are Empty Fields!";
         return false;
+    }
+
+    for(var i = 0; i < firstname.length; i++)
+    {
+        if((firstname.charCodeAt(i) < 65 || firstname.charCodeAt(i) > 90) && (firstname.charCodeAt(i) < 97 || firstname.charCodeAt(i) > 122))
+        {
+            document.getElementById("finalUpdateResult").innerHTML = "First Name contains a number/special character";
+            return false;
+        }
+    }
+    for(var i = 0; i < lastname.length; i++)
+    {
+        if((lastname.charCodeAt(i) < 65 || lastname.charCodeAt(i) > 90) && (lastname.charCodeAt(i) < 97 || lastname.charCodeAt(i) > 122))
+        {
+            document.getElementById("finalUpdateResult").innerHTML = "Last Name contains a number/special character";
+            return false;
+        }
+    }
+    for(var i = 0; i < phone.length; i++)
+    {
+        if(phone.charCodeAt(i) < 48 || phone.charCodeAt(i) > 57 )
+        {
+            document.getElementById("finalUpdateResult").innerHTML = "Phone Number contains a character/special character";
+            return false;
+        }
     }
 
     let tmp = {firstname:firstname,lastname:lastname,contactid:tempID,userid:userId,phone:phone,email:email};
