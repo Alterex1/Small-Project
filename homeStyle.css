@@ -301,7 +301,8 @@ table{
     margin-right: auto;
     border-collapse: collapse;
     table-layout: fixed;
-    scrollbar-gutter: auto;
+   
+    
 }
 
 tbody{
@@ -311,10 +312,11 @@ tbody{
     height: 200px;
     align-items: center;
     scrollbar-gutter: stable;
+    
 }
 
 th, td{
-    border: 1px solid black;
+    border: 1px solid rgb(216,151,147);
     padding: 5px;
     text-align: center;
     width: 300px;
