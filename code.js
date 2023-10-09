@@ -15,7 +15,11 @@ function Login()
 	let password = document.getElementById("password").value;
 	//var hash = md5( password );
 	
-	document.getElementById("loginResult").innerHTML = "";
+    if(email == "" || password == "")
+    {
+        document.getElementById("loginResult").innerHTML = "Field(s) Left Blank";
+        return;
+    }
 
 	let tmp = {email:email,password:password};
 	//var tmp = {login:login,password:hash};
